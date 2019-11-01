@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		64A691A5236BDBEC000002D5 /* Project5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A691A5236BDBEC000002D5 /* PokeGuessr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeGuessr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A691A8236BDBEC000002D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A691AA236BDBEC000002D5 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		64A691AD236BDBEC000002D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		64A6919C236BDBEC000002D5 = {
 			isa = PBXGroup;
 			children = (
-				64A691A7236BDBEC000002D5 /* Project5 */,
+				64A691A7236BDBEC000002D5 /* PokeGuessr */,
 				64A691A6236BDBEC000002D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		64A691A6236BDBEC000002D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64A691A5236BDBEC000002D5 /* Project5.app */,
+				64A691A5236BDBEC000002D5 /* PokeGuessr.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		64A691A7236BDBEC000002D5 /* Project5 */ = {
+		64A691A7236BDBEC000002D5 /* PokeGuessr */ = {
 			isa = PBXGroup;
 			children = (
 				64A691A8236BDBEC000002D5 /* AppDelegate.swift */,
@@ -61,15 +61,15 @@
 				64A691B1236BDBEE000002D5 /* LaunchScreen.storyboard */,
 				64A691B4236BDBEE000002D5 /* Info.plist */,
 			);
-			path = Project5;
+			path = PokeGuessr;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		64A691A4236BDBEC000002D5 /* Project5 */ = {
+		64A691A4236BDBEC000002D5 /* PokeGuessr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64A691B7236BDBEE000002D5 /* Build configuration list for PBXNativeTarget "Project5" */;
+			buildConfigurationList = 64A691B7236BDBEE000002D5 /* Build configuration list for PBXNativeTarget "PokeGuessr" */;
 			buildPhases = (
 				64A691A1236BDBEC000002D5 /* Sources */,
 				64A691A2236BDBEC000002D5 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = Project5;
+			name = PokeGuessr;
 			productName = Project5;
-			productReference = 64A691A5236BDBEC000002D5 /* Project5.app */;
+			productReference = 64A691A5236BDBEC000002D5 /* PokeGuessr.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 64A691A0236BDBEC000002D5 /* Build configuration list for PBXProject "Project5" */;
+			buildConfigurationList = 64A691A0236BDBEC000002D5 /* Build configuration list for PBXProject "PokeGuessr" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				64A691A4236BDBEC000002D5 /* Project5 */,
+				64A691A4236BDBEC000002D5 /* PokeGuessr */,
 			);
 		};
 /* End PBXProject section */
@@ -284,12 +284,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M2SK5W4MK3;
-				INFOPLIST_FILE = Project5/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PokeGuessr/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Project5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PokeGuessr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,12 +302,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M2SK5W4MK3;
-				INFOPLIST_FILE = Project5/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PokeGuessr/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Project5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PokeGuessr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64A691A0236BDBEC000002D5 /* Build configuration list for PBXProject "Project5" */ = {
+		64A691A0236BDBEC000002D5 /* Build configuration list for PBXProject "PokeGuessr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A691B5236BDBEE000002D5 /* Debug */,
@@ -326,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64A691B7236BDBEE000002D5 /* Build configuration list for PBXNativeTarget "Project5" */ = {
+		64A691B7236BDBEE000002D5 /* Build configuration list for PBXNativeTarget "PokeGuessr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A691B8236BDBEE000002D5 /* Debug */,
