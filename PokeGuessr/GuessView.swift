@@ -13,6 +13,13 @@ import Foundation
 
 //Load extension for images taken from https://www.hackingwithswift.com/example-code/uikit/how-to-load-a-remote-image-url-into-uiimageview
 //This adds a .load() function to UIImageViews that takes a URL, then loads it into that UIImageView. For example, image.load(url: imgur.com/example.png)
+
+extension Array where Element: Equatable {
+    func indexes(of element: Element) -> [Int] {
+        return self.enumerated().filter({ element == $0.element }).map({ $0.offset })
+    }
+}
+
 extension UIImageView {
     func load(url: URL, completion: @escaping () -> Void) {
         DispatchQueue.global().async { [weak self] in
@@ -23,6 +30,8 @@ extension UIImageView {
                         completion()
                     }
                 }
+            } else {
+                completion()
             }
         }
     }
@@ -75,8 +84,6 @@ class GuessView: UIViewController {
     var lettersToClickFrame = [UIButton]()
     var userInput = [String]()
     var userInputButtonFrames = [UIButton]()
-    
-    var spotOpen : [Bool] = []
     
     var isChecked = false
     
@@ -180,7 +187,6 @@ class GuessView: UIViewController {
                         button.removeFromSuperview()
                     }
                     self.userInputButtonFrames.removeAll()
-                    self.spotOpen.removeAll()
                     self.userInput.removeAll()
                     
                     self.typeLabel.text = self.currPokemon!.types[0].type.name
@@ -224,7 +230,7 @@ class GuessView: UIViewController {
                         self.userInputButtonFrames.last!.layer.shadowOffset = CGSize(width: 0, height: 0)
                         self.userInputButtonFrames.last!.tag = n
                         
-                        self.spotOpen.append(true)
+                        self.userInput.append("/")
                         
                         self.view.addSubview(self.userInputButtonFrames.last!)
                         self.view.sendSubviewToBack(self.userInputButtonFrames.last!)
@@ -236,33 +242,34 @@ class GuessView: UIViewController {
     
     @objc func letterButtonClicked(sender: UIButton!) {
         if(sender.frame.origin.y >= 650) {
-            if(userInput.count >= self.currPokemon!.name.count) {
+            if(!userInput.contains("/")) {
                 return
             }
             
-            for n in 0 ... userInputButtonFrames.count {
-                if(spotOpen[n] == true) {
+            for n in 0 ..< userInputButtonFrames.count {
+                if(userInput[n] == "/") {
                     UIView.animate(withDuration: 0.2, animations: {
-                        sender.frame = CGRect(x: self.userInputButtonFrames[n].frame.origin.x, y: self.userInputButtonFrames[self.userInput.count].frame.origin.y, width: 32, height: 32)
-                        //                if(self.buttonsAtTop.count > 0) {
-                        //                    //sender.frame = CGRect(x: self.buttonsAtTop.last!.frame.origin.x + 40, y: 420, width: 32, height: 32)
-                        //                } else {
-                        //                    sender.frame = CGRect(x: 50, y: 420, width: 32, height: 32)
-                        //                }
+                        sender.frame = CGRect(x: self.userInputButtonFrames[n].frame.origin.x, y: self.userInputButtonFrames[n].frame.origin.y, width: 32, height: 32)
                     })
-                    spotOpen[n] = false
-                    userInput.insert(sender.titleLabel!.text!, at: n)
+                    userInput[n] = sender.titleLabel!.text!
                     break
                 }
             }
         } else {
+            let indexesOfLetter = userInput.indexes(of: sender.titleLabel!.text!)
+            for n in indexesOfLetter {
+                if(userInputButtonFrames[n].frame.origin.x == sender.frame.origin.x) {
+                    userInput[n] = "/"
+                    break
+                }
+            }
+            
             let dest = CGPoint(x: lettersToClickFrame[sender.tag].frame.origin.x, y: lettersToClickFrame[sender.tag].frame.origin.y)
             UIView.animate(withDuration: 0.2, animations: {
                 sender.frame = CGRect(x: dest.x, y: dest.y, width: sender.frame.size.width, height: sender.frame.size.height)
             })
-            spotOpen[userInput.firstIndex(of: sender.titleLabel!.text!)!] = true
-            userInput.remove(at: userInput.firstIndex(of: sender.titleLabel!.text!)!)
         }
+        print("userInput: ", userInput.joined(separator: ""))
     }
     
     //when GuessView loads
@@ -309,7 +316,7 @@ class GuessView: UIViewController {
             } catch let jsonError {
                 print("error: ", jsonError)
             }
-            }.resume()
+        }.resume()
     }
     
 }
