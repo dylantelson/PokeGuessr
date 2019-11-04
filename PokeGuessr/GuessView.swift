@@ -11,15 +11,17 @@ import Foundation
 
 //API FROM: https://pokeapi.co/
 
-//Load extension for images taken from https://www.hackingwithswift.com/example-code/uikit/how-to-load-a-remote-image-url-into-uiimageview
-//This adds a .load() function to UIImageViews that takes a URL, then loads it into that UIImageView. For example, image.load(url: imgur.com/example.png)
 
+//Array indexes extension taken from https://stackoverflow.com/questions/45933149/swift-how-to-get-indexes-of-filtered-items-of-array
+//This filters the array and returns the indexes at which the given element can be found
 extension Array where Element: Equatable {
     func indexes(of element: Element) -> [Int] {
         return self.enumerated().filter({ element == $0.element }).map({ $0.offset })
     }
 }
 
+//Load extension for images taken from https://www.hackingwithswift.com/example-code/uikit/how-to-load-a-remote-image-url-into-uiimageview
+//This adds a .load() function to UIImageViews that takes a URL, then loads it into that UIImageView. For example, image.load(url: imgur.com/example.png)
 extension UIImageView {
     func load(url: URL, completion: @escaping () -> Void) {
         DispatchQueue.global().async { [weak self] in
