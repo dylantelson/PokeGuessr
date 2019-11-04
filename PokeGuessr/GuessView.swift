@@ -100,12 +100,15 @@ class GuessView: UIViewController {
     @IBOutlet var nameLabel : UILabel!
     @IBOutlet var PokeImage: UIImageView!
     
+    @IBOutlet var checkButton : UIButton!
+    
     //Whenever the bottom button is pressed, this function is run. Sender is the button clicked.
     @IBAction func ButtonClicked(_ sender: UIButton) {
         if(!isChecked) {
             if(userInput.joined(separator: "") == currPokemon!.name) {
                 print("Correct!")
                 isChecked = true
+                checkButton.setTitle("Next", for: .normal)
             } else {
                 print("Incorrect!")
             }
@@ -170,12 +173,17 @@ class GuessView: UIViewController {
     
     //function that runs the getPokemon function again- in a separate function for readability and for when we want to add more stuff to this function, so getPokemon() stays as only for JSON parsing
     func newPokemon() {
-        
+        //set button title to Loading while API data loads
+        checkButton.setTitle("Loading...", for: .normal)
+        //what's in the brackets is done after the API data is loaded
         getPokemon {
             //in main.async because changing UILabel text must be done on main thread, not background
             DispatchQueue.main.async {
+                //what's in the brackets is done after the image is loaded
                 self.PokeImage.load(url: URL(string: self.currPokemon!.sprites.frontDefault)!) {
-                    
+                    //change checkButton text to "Check"
+                    self.checkButton.setTitle("Check", for: .normal)
+                    //move all buttons that are at the top from the previous userInput back to their original positions at the bottom
                     for n in self.lettersToClick {
                         if(n.frame.origin.y < 650) {
                             let dest = CGPoint(x: self.lettersToClickFrame[n.tag].frame.origin.x, y: self.lettersToClickFrame[n.tag].frame.origin.y)
@@ -185,12 +193,14 @@ class GuessView: UIViewController {
                         }
                     }
                     
+                    //remove all buttonFrames and the userInput from the previous pokemon
                     for button in self.userInputButtonFrames {
                         button.removeFromSuperview()
                     }
                     self.userInputButtonFrames.removeAll()
                     self.userInput.removeAll()
                     
+                    //set the text for all the labels
                     self.typeLabel.text = self.currPokemon!.types[0].type.name
                     self.moveLabel.text = self.currPokemon!.moves[0].move.name
                     self.abilityLabel.text = self.currPokemon!.abilities[0].ability.name
@@ -205,18 +215,24 @@ class GuessView: UIViewController {
                     //Set the nameLabel's x center to the view's x center
                     self.nameLabel.center.x = self.view.center.x
                     
+                    //split the Pokemon's name into an array of characters and store that in pokemonLetters
                     var pokemonLetters = Array(self.currPokemon!.name)
+                    //fill up the pokemonLetters array with random letters until there are enough to fill up the 16 open spots
                     while(pokemonLetters.count < 16) {
                         let randomLetter = self.randomLetters[Int.random(in: 0 ... self.randomLetters.count - 1)]
+                        //no random letters can be repeats
                         if(pokemonLetters.contains(randomLetter)) {
                             continue
                         }
                         pokemonLetters.append(randomLetter)
                     }
+                    //shuffle the array so it has the pokemon's name as the first buttons shown
                     pokemonLetters.shuffle()
+                    //set buttons letters
                     for n in 0 ..< 16 {
                         self.lettersToClick[n].setTitle(String(pokemonLetters[n]), for: .normal)
                     }
+                    //create the userInputButtonFrames, meaning the frames at the top where the buttons go after the user clicks on them
                     for n in 0 ..< self.currPokemon!.name.count {
                         if(n == 0) {
                             self.userInputButtonFrames.append(UIButton(frame: CGRect(x: Int(self.view.center.x) - self.currPokemon!.name.count * 20, y: 642, width: 32, height: 32)))
@@ -232,8 +248,10 @@ class GuessView: UIViewController {
                         self.userInputButtonFrames.last!.layer.shadowOffset = CGSize(width: 0, height: 0)
                         self.userInputButtonFrames.last!.tag = n
                         
+                        //append "/" for each letter in the pokemon's name, as the user input is currently empty
                         self.userInput.append("/")
                         
+                        //add buttonframe to view so it is visible, but send it to back so it appears behind buttons when they are send to the same coordinates
                         self.view.addSubview(self.userInputButtonFrames.last!)
                         self.view.sendSubviewToBack(self.userInputButtonFrames.last!)
                     }
@@ -243,29 +261,32 @@ class GuessView: UIViewController {
     }
     
     @objc func letterButtonClicked(sender: UIButton!) {
+        //if button is at the bottom, meaning not in user input
         if(sender.frame.origin.y >= 650) {
+            //if input is full, meaning there are no "/"s in userInput, return
             if(!userInput.contains("/")) {
                 return
             }
             
-            for n in 0 ..< userInputButtonFrames.count {
-                if(userInput[n] == "/") {
-                    UIView.animate(withDuration: 0.2, animations: {
-                        sender.frame = CGRect(x: self.userInputButtonFrames[n].frame.origin.x, y: self.userInputButtonFrames[n].frame.origin.y, width: 32, height: 32)
-                    })
-                    userInput[n] = sender.titleLabel!.text!
-                    break
-                }
-            }
+            //find first open spot (first index of "/") and both move to it and add the letter to userInput
+            let leftMostOpenSpot = userInput.firstIndex(of: "/")
+            UIView.animate(withDuration: 0.2, animations: {
+                sender.frame = CGRect(x: self.userInputButtonFrames[leftMostOpenSpot!].frame.origin.x, y: self.userInputButtonFrames[leftMostOpenSpot!].frame.origin.y, width: 32, height: 32)
+            })
+            userInput[leftMostOpenSpot!] = sender.titleLabel!.text!
+            //if button is at top, meaning already in user input
         } else {
+            //find all indexes of the letter and loop through all of them
             let indexesOfLetter = userInput.indexes(of: sender.titleLabel!.text!)
             for n in indexesOfLetter {
+                //check if the current index is the correct one by checking the X of the frame behind the button and the X of the clicked button (this is in place to avoid bugs with duplicates, as just taking the first index would cause issues when removing the non-first index)
                 if(userInputButtonFrames[n].frame.origin.x == sender.frame.origin.x) {
+                    //when the correct index is found, set it to empty/open and break the loop
                     userInput[n] = "/"
                     break
                 }
             }
-            
+            //move button to its original frame at the bottom
             let dest = CGPoint(x: lettersToClickFrame[sender.tag].frame.origin.x, y: lettersToClickFrame[sender.tag].frame.origin.y)
             UIView.animate(withDuration: 0.2, animations: {
                 sender.frame = CGRect(x: dest.x, y: dest.y, width: sender.frame.size.width, height: sender.frame.size.height)

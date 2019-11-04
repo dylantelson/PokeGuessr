@@ -109,7 +109,7 @@
                                 <color key="backgroundColor" red="0.91373163459999995" green="0.91371446850000004" blue="0.9137260318" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd6-Re-EMA">
-                                <rect key="frame" x="172" y="807" width="62" height="39"/>
+                                <rect key="frame" x="120" y="808" width="166" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Check">
@@ -126,6 +126,7 @@
                     <connections>
                         <outlet property="PokeImage" destination="xIi-az-QrY" id="MBD-fY-iKH"/>
                         <outlet property="abilityLabel" destination="FGS-Uu-jXZ" id="1FX-fD-ZW3"/>
+                        <outlet property="checkButton" destination="Jd6-Re-EMA" id="urA-RA-Kt3"/>
                         <outlet property="heightLabel" destination="ll9-en-ztl" id="dYJ-L2-Afc"/>
                         <outlet property="moveLabel" destination="jLz-UE-H2e" id="sGu-Gg-rzi"/>
                         <outlet property="nameLabel" destination="vj3-1M-41b" id="h5Z-kJ-IQw"/>
@@ -134,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6f3-VH-dqF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="113"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="112.5"/>
         </scene>
     </scenes>
     <resources>
