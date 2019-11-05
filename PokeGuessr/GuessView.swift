@@ -2,9 +2,22 @@
 //  GuessView.swift
 //  PokeGuessr
 //
-//  Created by Dylan Telson on 11/2/19.
-//  Copyright © 2019 Dylan Telson. All rights reserved.
+//  Created by Dylan Telson & Paul Maino on 11/2/19.
+//  Copyright © 2019 Dylan Telson & Paul Maino. All rights reserved.
 //
+
+/* TODO LIST:
+ 1) Change move to either a more specific move or something else
+ 2) Show both types rather than just one for multi-type Pokemon
+ 3) Remove dashes and add capitalization to moves (fire-punch -> Fire Punch)
+ 4) Make prompt into sentence, add text around it "This (height) Pokemon is of type (type) and has (move) and (ability)" something like that
+ 5) Change image to a ?, have it change to loaded image when the correct answer is inputted
+ 6) Add score and make it save (UserDefaults.standard)
+ 7) Add account creation, login, and database for leaderboard using Firebase
+ 8) Fix constraints
+ 9) Add loading screen or something of the like?
+ 10) Change design of app (colors fonts etc)
+*/
 
 import UIKit
 import Foundation
