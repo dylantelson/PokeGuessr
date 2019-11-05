@@ -58,10 +58,10 @@
 			children = (
 				64A691A8236BDBEC000002D5 /* AppDelegate.swift */,
 				64A691AA236BDBEC000002D5 /* TitleScreen.swift */,
+				64A691B1236BDBEE000002D5 /* LaunchScreen.storyboard */,
 				64529986236D3B4A003584B6 /* GuessView.swift */,
 				64A691AC236BDBEC000002D5 /* Main.storyboard */,
 				64A691AF236BDBEE000002D5 /* Assets.xcassets */,
-				64A691B1236BDBEE000002D5 /* LaunchScreen.storyboard */,
 				64A691B4236BDBEE000002D5 /* Info.plist */,
 			);
 			path = PokeGuessr;
@@ -287,7 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M2SK5W4MK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PokeGuessr/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M2SK5W4MK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PokeGuessr/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
