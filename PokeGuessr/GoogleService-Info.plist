@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>887085534899-frvf7nu1p2mollc4ensnfbvsk71c5t80.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.887085534899-frvf7nu1p2mollc4ensnfbvsk71c5t80</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0Jb8mGsjxq8FVk2anbf8rzIMThCHC2MY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>887085534899</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.PokeGuessr</string>
+	<key>PROJECT_ID</key>
+	<string>pokeguessr</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pokeguessr.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:887085534899:ios:eab1d573ae487df3d8aac6</string>
+	<key>DATABASE_URL</key>
+	<string>https://pokeguessr.firebaseio.com</string>
+</dict>
+</plist>

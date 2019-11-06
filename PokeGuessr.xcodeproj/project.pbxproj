@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		593E1E032F56D2C5D80EDAB6 /* Pods_PokeGuessr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525466CB96BBF95E3C0B094 /* Pods_PokeGuessr.framework */; };
+		643E1AAE2373297F008195D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 643E1AAD2373297F008195D3 /* GoogleService-Info.plist */; };
 		64529987236D3B4A003584B6 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64529986236D3B4A003584B6 /* GuessView.swift */; };
 		648BB8C0237289CE001C5DA8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BB8BF237289CE001C5DA8 /* SignUp.swift */; };
 		648BB8C2237289FD001C5DA8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BB8C1237289FD001C5DA8 /* Login.swift */; };
@@ -17,11 +18,11 @@
 		64A691AE236BDBEC000002D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A691AC236BDBEC000002D5 /* Main.storyboard */; };
 		64A691B0236BDBEE000002D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A691AF236BDBEE000002D5 /* Assets.xcassets */; };
 		64A691B3236BDBEE000002D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A691B1236BDBEE000002D5 /* LaunchScreen.storyboard */; };
-		64E46EFC23723E5500522054 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E46EFB23723E5500522054 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19AD33E3D7CED8B04638E711 /* Pods-PokeGuessr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeGuessr.release.xcconfig"; path = "Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr.release.xcconfig"; sourceTree = "<group>"; };
+		643E1AAD2373297F008195D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64529986236D3B4A003584B6 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		648BB8BF237289CE001C5DA8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		648BB8C1237289FD001C5DA8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		64A691AF236BDBEE000002D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A691B2236BDBEE000002D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A691B4236BDBEE000002D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64E46EFB23723E5500522054 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A185B07AAE5FF573BBEAFBF1 /* Pods-PokeGuessr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeGuessr.debug.xcconfig"; path = "Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr.debug.xcconfig"; sourceTree = "<group>"; };
 		C525466CB96BBF95E3C0B094 /* Pods_PokeGuessr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeGuessr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,7 +89,7 @@
 				648BB8C323728A13001C5DA8 /* Startup.swift */,
 				64A691AF236BDBEE000002D5 /* Assets.xcassets */,
 				64A691B4236BDBEE000002D5 /* Info.plist */,
-				64E46EFB23723E5500522054 /* GoogleService-Info.plist */,
+				643E1AAD2373297F008195D3 /* GoogleService-Info.plist */,
 			);
 			path = PokeGuessr;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A691B3236BDBEE000002D5 /* LaunchScreen.storyboard in Resources */,
-				64E46EFC23723E5500522054 /* GoogleService-Info.plist in Resources */,
+				643E1AAE2373297F008195D3 /* GoogleService-Info.plist in Resources */,
 				64A691B0236BDBEE000002D5 /* Assets.xcassets in Resources */,
 				64A691AE236BDBEC000002D5 /* Main.storyboard in Resources */,
 			);
