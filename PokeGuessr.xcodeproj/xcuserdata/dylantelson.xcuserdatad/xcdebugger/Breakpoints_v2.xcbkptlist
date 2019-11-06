@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "198123B1-71BB-482E-BE21-7EF5D878A9CE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F37683C-3D3F-453A-B50C-D25C8AB40E4E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeGuessr/GuessView.swift"
+            timestampString = "594622575.7925659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "GuessView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5F37683C-3D3F-453A-B50C-D25C8AB40E4E - 63eae4ee0e33eb5f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeGuessr.GuessView.viewDidLoad() -&gt; ()"
+                  moduleName = "PokeGuessr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dylantelson/XCodeProjects/Project5/PokeGuessr/GuessView.swift"
+                  timestampString = "594367740.308274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  uuid = "5F37683C-3D3F-453A-B50C-D25C8AB40E4E - 9670a6d4b929454b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in PokeGuessr.GuessView.viewDidLoad() -&gt; ()"
+                  moduleName = "PokeGuessr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dylantelson/XCodeProjects/Project5/PokeGuessr/GuessView.swift"
+                  timestampString = "594367740.3123389"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
