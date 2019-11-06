@@ -38,9 +38,8 @@
                                     <constraint firstAttribute="height" constant="74" id="p7e-Aw-Vj4"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-73-a9c">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-73-a9c">
                                 <rect key="frame" x="166" y="767" width="83" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,8 +48,8 @@
                                     <action selector="logoutWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ap6-Ix-DJ9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmZ-Yx-vyV">
-                                <rect key="frame" x="149" y="404" width="117" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmZ-Yx-vyV">
+                                <rect key="frame" x="149" y="493" width="116" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,19 +58,41 @@
                                     <segue destination="58r-cC-FpV" kind="showDetail" id="2wQ-Mg-5qN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johndoe@email.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjf-9I-TpA">
+                                <rect key="frame" x="220" y="35" width="154" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-tj-MtV">
+                                <rect key="frame" x="185" y="637" width="45" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.62181580069999998" blue="0.61338913439999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="fgh-73-a9c" firstAttribute="top" secondItem="yAH-tj-MtV" secondAttribute="bottom" constant="124" id="2p8-YO-gPa"/>
+                            <constraint firstItem="yAH-tj-MtV" firstAttribute="top" secondItem="wmZ-Yx-vyV" secondAttribute="bottom" constant="179" id="8Ds-bA-hz9"/>
                             <constraint firstItem="wmZ-Yx-vyV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="Nm8-u3-AQI"/>
                             <constraint firstItem="wmZ-Yx-vyV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMX-Ll-BhS"/>
                             <constraint firstItem="Ru1-TT-vfr" firstAttribute="centerX" secondItem="wmZ-Yx-vyV" secondAttribute="centerX" id="SiE-9o-T2i"/>
+                            <constraint firstItem="yAH-tj-MtV" firstAttribute="top" secondItem="wmZ-Yx-vyV" secondAttribute="bottom" constant="179" id="Xxz-lT-gzd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fjf-9I-TpA" secondAttribute="trailing" constant="40" id="YNk-9F-yez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAH-tj-MtV" secondAttribute="trailing" constant="186" id="d43-H0-bmh"/>
                             <constraint firstItem="Ru1-TT-vfr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="dBg-aU-KH7"/>
+                            <constraint firstItem="yAH-tj-MtV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lP9-28-vmt"/>
+                            <constraint firstItem="fjf-9I-TpA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="s4h-Hm-P8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wmZ-Yx-vyV" secondAttribute="bottom" constant="245" id="vUV-EK-JGY"/>
                             <constraint firstItem="Ru1-TT-vfr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="wKP-XD-Nv8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SEk-fj-CMt"/>
+                    <connections>
+                        <outlet property="userLabel" destination="fjf-9I-TpA" id="Sd0-N7-I1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +176,13 @@
                                     <action selector="ButtonClicked:" destination="58r-cC-FpV" eventType="touchUpInside" id="iWg-aF-dkH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-5L-4mM">
+                                <rect key="frame" x="349" y="20" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.62181580069999998" blue="0.61338913439999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -375,6 +403,6 @@
         <image name="PokeGuessr_Title" width="502" height="121"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2wQ-Mg-5qN"/>
+        <segue reference="Mbc-zw-SEA"/>
     </inferredMetricsTieBreakers>
 </document>

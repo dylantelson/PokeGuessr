@@ -17,6 +17,7 @@
  8) Fix constraints
  9) Add loading screen or something of the like?
  10) Change design of app (colors fonts etc)
+ 11) Change views so they don't do that weird thing where you swipe them down to go to previous view
 */
 
 import UIKit
@@ -214,8 +215,12 @@ class GuessView: UIViewController {
                     self.userInput.removeAll()
                     
                     //set the text for all the labels
-                    self.typeLabel.text = self.currPokemon!.types[0].type.name
-                    self.moveLabel.text = self.currPokemon!.moves[0].move.name
+                    var secondType = ""
+                    if(self.currPokemon!.types.count >= 2) {
+                        secondType = self.currPokemon!.types[1].type.name
+                    }
+                    self.typeLabel.text = self.currPokemon!.types[0].type.name + " " + secondType
+                    self.moveLabel.text = self.currPokemon!.moves[self.currPokemon!.moves.count-1].move.name
                     self.abilityLabel.text = self.currPokemon!.abilities[0].ability.name
                     self.heightLabel.text = self.convertHeight(height: self.currPokemon!.height)
                     self.nameLabel.text = self.currPokemon!.name

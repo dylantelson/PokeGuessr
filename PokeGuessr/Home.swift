@@ -11,6 +11,17 @@ import UIKit
 import FirebaseAuth
 
 class Home : UIViewController {
+    
+    @IBOutlet var userLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let email = Auth.auth().currentUser!.email
+        userLabel.text = email
+        userLabel.sizeToFit()
+    }
+    
     @IBAction func logout(sender: UIButton!) {
         do {
             try Auth.auth().signOut()
