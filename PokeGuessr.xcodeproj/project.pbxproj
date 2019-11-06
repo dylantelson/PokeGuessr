@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593E1E032F56D2C5D80EDAB6 /* Pods_PokeGuessr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525466CB96BBF95E3C0B094 /* Pods_PokeGuessr.framework */; };
 		64529987236D3B4A003584B6 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64529986236D3B4A003584B6 /* GuessView.swift */; };
 		64A691A9236BDBEC000002D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A691A8236BDBEC000002D5 /* AppDelegate.swift */; };
 		64A691AB236BDBEC000002D5 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A691AA236BDBEC000002D5 /* TitleScreen.swift */; };
 		64A691AE236BDBEC000002D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A691AC236BDBEC000002D5 /* Main.storyboard */; };
 		64A691B0236BDBEE000002D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A691AF236BDBEE000002D5 /* Assets.xcassets */; };
 		64A691B3236BDBEE000002D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A691B1236BDBEE000002D5 /* LaunchScreen.storyboard */; };
+		64E46EFC23723E5500522054 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E46EFB23723E5500522054 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AD33E3D7CED8B04638E711 /* Pods-PokeGuessr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeGuessr.release.xcconfig"; path = "Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr.release.xcconfig"; sourceTree = "<group>"; };
 		64529986236D3B4A003584B6 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		64A691A5236BDBEC000002D5 /* PokeGuessr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeGuessr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A691A8236BDBEC000002D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		64A691AF236BDBEE000002D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A691B2236BDBEE000002D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A691B4236BDBEE000002D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E46EFB23723E5500522054 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A185B07AAE5FF573BBEAFBF1 /* Pods-PokeGuessr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeGuessr.debug.xcconfig"; path = "Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr.debug.xcconfig"; sourceTree = "<group>"; };
+		C525466CB96BBF95E3C0B094 /* Pods_PokeGuessr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeGuessr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593E1E032F56D2C5D80EDAB6 /* Pods_PokeGuessr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5285421D51BD3637054F5383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C525466CB96BBF95E3C0B094 /* Pods_PokeGuessr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64A6919C236BDBEC000002D5 = {
 			isa = PBXGroup;
 			children = (
 				64A691A7236BDBEC000002D5 /* PokeGuessr */,
 				64A691A6236BDBEC000002D5 /* Products */,
+				6FEC4EB8E782352499AF6213 /* Pods */,
+				5285421D51BD3637054F5383 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +80,19 @@
 				64A691AC236BDBEC000002D5 /* Main.storyboard */,
 				64A691AF236BDBEE000002D5 /* Assets.xcassets */,
 				64A691B4236BDBEE000002D5 /* Info.plist */,
+				64E46EFB23723E5500522054 /* GoogleService-Info.plist */,
 			);
 			path = PokeGuessr;
+			sourceTree = "<group>";
+		};
+		6FEC4EB8E782352499AF6213 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A185B07AAE5FF573BBEAFBF1 /* Pods-PokeGuessr.debug.xcconfig */,
+				19AD33E3D7CED8B04638E711 /* Pods-PokeGuessr.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64A691B7236BDBEE000002D5 /* Build configuration list for PBXNativeTarget "PokeGuessr" */;
 			buildPhases = (
+				50ED9EA713C1AE99CA8F6257 /* [CP] Check Pods Manifest.lock */,
 				64A691A1236BDBEC000002D5 /* Sources */,
 				64A691A2236BDBEC000002D5 /* Frameworks */,
 				64A691A3236BDBEC000002D5 /* Resources */,
+				3A8BCDB017E72F44ED40BF08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A691B3236BDBEE000002D5 /* LaunchScreen.storyboard in Resources */,
+				64E46EFC23723E5500522054 /* GoogleService-Info.plist in Resources */,
 				64A691B0236BDBEE000002D5 /* Assets.xcassets in Resources */,
 				64A691AE236BDBEC000002D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A8BCDB017E72F44ED40BF08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeGuessr/Pods-PokeGuessr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50ED9EA713C1AE99CA8F6257 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokeGuessr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64A691A1236BDBEC000002D5 /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		64A691B8236BDBEE000002D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A185B07AAE5FF573BBEAFBF1 /* Pods-PokeGuessr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +376,7 @@
 		};
 		64A691B9236BDBEE000002D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AD33E3D7CED8B04638E711 /* Pods-PokeGuessr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
