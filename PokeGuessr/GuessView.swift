@@ -16,6 +16,7 @@
  7) Add loading screen or something of the like?
  8) Change design of app (colors fonts etc)
  9) Change views so they don't do that weird thing where you swipe them down to go to previous view
+ 10) Idea, do generation as a lower difficulty? We'd have to just map out the ranges of which pokemon # is in what gen.
 */
 
 import UIKit
@@ -222,6 +223,15 @@ class GuessView: UIViewController {
                     self.abilityLabel.text = self.currPokemon!.abilities[0].ability.name
                     self.heightLabel.text = self.convertHeight(height: self.currPokemon!.height)
                     self.nameLabel.text = self.currPokemon!.name
+                    
+                    //text reformatting
+                    self.moveLabel.text = self.moveLabel.text!.replacingOccurrences(of: "-", with: " ")
+                    self.abilityLabel.text = self.abilityLabel.text!.replacingOccurrences(of: "-", with: " ")
+                    self.moveLabel.text = self.moveLabel.text?.capitalized
+                    self.typeLabel.text = self.typeLabel.text?.capitalized
+                    self.abilityLabel.text = self.abilityLabel.text?.capitalized
+                    self.nameLabel.text = self.nameLabel.text?.capitalized
+                    
                     //sizeToFit modifies the size of the UILabels to fit the text inside so that long text wouldn't appear as "Pikac..." etc.
                     self.typeLabel.sizeToFit()
                     self.moveLabel.sizeToFit()
