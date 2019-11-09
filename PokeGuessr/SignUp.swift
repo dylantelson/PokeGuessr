@@ -26,8 +26,7 @@ class SignUp: UIViewController {
         } else{
             Auth.auth().createUser(withEmail: email.text!, password: pass.text!){ (user, error) in
                 if error == nil {
-                    let home = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! UIViewController
-                    self.present(home, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "signupToHome", sender: self)
                 }
                 else{
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

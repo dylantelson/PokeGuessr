@@ -16,8 +16,7 @@ class Startup: UIViewController {
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
-            let home = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! UIViewController
-            self.present(home, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "startupToHome", sender: self)
         }
     }
     @IBAction func ButtonClicked(_ sender: UIButton!) {
