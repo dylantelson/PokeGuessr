@@ -7,6 +7,7 @@ The traits you are given are:
 - One possible ability
 - Height
 
+---
 
 Progress:
 - Oct 31: First commit, added initial elements.
