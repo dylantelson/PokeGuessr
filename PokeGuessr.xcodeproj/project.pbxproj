@@ -28,6 +28,7 @@
 		648BB8C1237289FD001C5DA8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		648BB8C323728A13001C5DA8 /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
 		648BB8C52372926E001C5DA8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		649FD6BC2378D7A1006D19B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64A691A5236BDBEC000002D5 /* PokeGuessr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeGuessr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A691A8236BDBEC000002D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A691AD236BDBEC000002D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 				64A691AF236BDBEE000002D5 /* Assets.xcassets */,
 				64A691B4236BDBEE000002D5 /* Info.plist */,
 				643E1AAD2373297F008195D3 /* GoogleService-Info.plist */,
+				649FD6BC2378D7A1006D19B9 /* README.md */,
 			);
 			path = PokeGuessr;
 			sourceTree = "<group>";
