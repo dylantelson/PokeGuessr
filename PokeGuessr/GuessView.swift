@@ -32,25 +32,6 @@ extension Array where Element: Equatable {
     }
 }
 
-//Load extension for images taken from https://www.hackingwithswift.com/example-code/uikit/how-to-load-a-remote-image-url-into-uiimageview
-//This adds a .load() function to UIImageViews that takes a URL, then loads it into that UIImageView. For example, image.load(url: imgur.com/example.png)
-//extension UIImageView {
-//    func load(url: URL, completion: @escaping () -> Void) {
-//        DispatchQueue.global().async { [weak self] in
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self?.image = image
-//                        completion()
-//                    }
-//                }
-//            } else {
-//                completion()
-//            }
-//        }
-//    }
-//}
-
 //Pokemon struct that has all the information we currently need
 struct Pokemon: Codable {
     let name : String
@@ -138,6 +119,7 @@ class GuessView: UIViewController {
         }
     }
     
+    //Modified to fit into this app's functionality from https://www.hackingwithswift.com/example-code/uikit/how-to-load-a-remote-image-url-into-uiimageview
     func loadImage(url: URL) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
