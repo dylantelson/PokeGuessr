@@ -86,6 +86,10 @@ class GuessView: UIViewController {
     var currPokemon : Pokemon?
     var currGen = 0
     
+    //Score to add to the user's total score, per Pokemon, that will be decremented over time
+    var scoreToAdd = 1000
+    var timer = Timer()
+    
     //IBOutlets that are connected to the Storyboard
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var moveLabel : UILabel!
@@ -112,7 +116,8 @@ class GuessView: UIViewController {
                 self.nameLabel.center.x = self.view.center.x
                 self.PokeImage.image = imageToShow
                 
-                UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "UserScore") + 1000, forKey: "UserScore")
+                //score updating
+                UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "UserScore") + scoreToAdd, forKey: "UserScore")
                 scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
             } else {
                 print("Incorrect!")
@@ -190,8 +195,20 @@ class GuessView: UIViewController {
         newPokemon()
     }
     
+    @objc func updateScore() {
+        if(scoreToAdd >= 10) {
+            scoreToAdd -= 10
+        }
+        
+    }
+    
+    
     //function that runs the getPokemon function again- in a separate function for readability and for when we want to add more stuff to this function, so getPokemon() stays as only for JSON parsing
     func newPokemon() {
+        //starts the timer
+        scoreToAdd = 1000
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateScore)), userInfo: nil, repeats: false)
+        
         //set button title to Loading while API data loads
         checkButton.setTitle("Loading...", for: .normal)
         //what's in the brackets is done after the API data is loaded
