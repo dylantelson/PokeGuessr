@@ -94,6 +94,7 @@ class GuessView: UIViewController {
     @IBOutlet var nameLabel : UILabel!
     @IBOutlet var PokeImage: UIImageView!
     
+    @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var checkButton : UIButton!
     
     var imageToShow = UIImage()
@@ -110,6 +111,9 @@ class GuessView: UIViewController {
                 self.nameLabel.sizeToFit()
                 self.nameLabel.center.x = self.view.center.x
                 self.PokeImage.image = imageToShow
+                
+                UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "UserScore") + 1000, forKey: "UserScore")
+                scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
             } else {
                 print("Incorrect!")
             }
@@ -133,6 +137,7 @@ class GuessView: UIViewController {
     }
     
     func setupGame() {
+        scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
         for n in 0 ..< 16 {
             var xToSet = 0
             var yToSet = 0

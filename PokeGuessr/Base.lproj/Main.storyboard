@@ -69,8 +69,8 @@
                                     <segue destination="58r-cC-FpV" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="2wQ-Mg-5qN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 5200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-tj-MtV">
-                                <rect key="frame" x="161" y="692" width="92" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: 5200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-tj-MtV">
+                                <rect key="frame" x="75" y="693" width="265" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                         <color key="backgroundColor" red="1" green="0.62181580069999998" blue="0.61338913439999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="yAH-tj-MtV" firstAttribute="centerX" secondItem="fgh-73-a9c" secondAttribute="centerX" id="Cl4-9f-8aq"/>
-                            <constraint firstAttribute="bottom" secondItem="yAH-tj-MtV" secondAttribute="bottom" constant="184" id="MUE-8s-MUU"/>
+                            <constraint firstAttribute="bottom" secondItem="yAH-tj-MtV" secondAttribute="bottom" constant="183" id="MUE-8s-MUU"/>
                             <constraint firstItem="wmZ-Yx-vyV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Nm8-u3-AQI"/>
                             <constraint firstItem="wmZ-Yx-vyV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMX-Ll-BhS"/>
                             <constraint firstItem="Ru1-TT-vfr" firstAttribute="centerX" secondItem="wmZ-Yx-vyV" secondAttribute="centerX" id="SiE-9o-T2i"/>
@@ -95,6 +95,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SEk-fj-CMt"/>
                     <connections>
+                        <outlet property="scoreLabel" destination="yAH-tj-MtV" id="RzK-qZ-qfa"/>
                         <outlet property="userLabel" destination="fjf-9I-TpA" id="Sd0-N7-I1J"/>
                     </connections>
                 </viewController>
@@ -170,7 +171,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 900" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-5L-4mM">
-                                <rect key="frame" x="308.5" y="90" width="85" height="21"/>
+                                <rect key="frame" x="176" y="90" width="217.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -247,7 +248,7 @@
                             <constraint firstItem="jLz-UE-H2e" firstAttribute="leading" secondItem="ll9-en-ztl" secondAttribute="leading" constant="-59" id="Ihb-vP-ikF"/>
                             <constraint firstItem="TRZ-Wc-qFf" firstAttribute="trailing" secondItem="Tph-5L-4mM" secondAttribute="trailing" constant="20.5" id="JOe-Sf-054"/>
                             <constraint firstItem="vj3-1M-41b" firstAttribute="top" secondItem="h5o-5A-RTz" secondAttribute="bottom" constant="8" id="LGB-yu-YjJ"/>
-                            <constraint firstItem="Tph-5L-4mM" firstAttribute="leading" secondItem="dtQ-lX-rKI" secondAttribute="trailing" constant="253.5" id="NZT-Kl-hwd"/>
+                            <constraint firstItem="Tph-5L-4mM" firstAttribute="leading" secondItem="dtQ-lX-rKI" secondAttribute="trailing" constant="121" id="NZT-Kl-hwd"/>
                             <constraint firstItem="Jd6-Re-EMA" firstAttribute="leading" secondItem="TRZ-Wc-qFf" secondAttribute="leading" constant="176" id="PBz-zz-umJ"/>
                             <constraint firstItem="dtQ-lX-rKI" firstAttribute="top" secondItem="TRZ-Wc-qFf" secondAttribute="top" constant="38" id="TAM-qM-EOK"/>
                             <constraint firstItem="TRZ-Wc-qFf" firstAttribute="trailing" secondItem="Rbl-XH-PY4" secondAttribute="trailing" constant="56" id="XKu-LT-OwE"/>
@@ -280,6 +281,7 @@
                         <outlet property="heightLabel" destination="ll9-en-ztl" id="dYJ-L2-Afc"/>
                         <outlet property="moveLabel" destination="jLz-UE-H2e" id="sGu-Gg-rzi"/>
                         <outlet property="nameLabel" destination="vj3-1M-41b" id="h5Z-kJ-IQw"/>
+                        <outlet property="scoreLabel" destination="Tph-5L-4mM" id="2Em-VN-zcc"/>
                         <outlet property="typeLabel" destination="KEn-1Z-71U" id="xFA-mO-f1b"/>
                     </connections>
                 </viewController>
@@ -495,6 +497,7 @@
         <image name="questionmarkblue" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nSi-AI-OaD"/>
+        <segue reference="2wQ-Mg-5qN"/>
+        <segue reference="rUu-TA-GYK"/>
     </inferredMetricsTieBreakers>
 </document>
