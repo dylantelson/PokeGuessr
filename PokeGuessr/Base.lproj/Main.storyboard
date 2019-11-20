@@ -149,7 +149,7 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="BackButtonClickedWith_sender:" destination="58r-cC-FpV" eventType="touchUpInside" id="qtg-th-nIo"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="rUu-TA-GYK"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="rUu-TA-GYK"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PokeGuessr_Title" translatesAutoresizingMaskIntoConstraints="NO" id="h5o-5A-RTz">
@@ -506,6 +506,6 @@
         <image name="questionmarkblue" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9fN-ep-aFT"/>
+        <segue reference="rUu-TA-GYK"/>
     </inferredMetricsTieBreakers>
 </document>
