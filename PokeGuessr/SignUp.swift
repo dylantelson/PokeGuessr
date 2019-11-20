@@ -10,11 +10,14 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUp: UIViewController {
     @IBOutlet weak var email : UITextField!
     @IBOutlet var pass : UITextField!
     @IBOutlet var confirmpass : UITextField!
+    
+    @IBOutlet var name : UITextField!
     
     @IBOutlet var signUpButton : UIButton!
     
@@ -35,8 +38,11 @@ class SignUp: UIViewController {
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
         } else{
-            Auth.auth().createUser(withEmail: email.text!, password: pass.text!){ (user, error) in
+            Auth.auth().createUser(withEmail: email.text!, password: pass.text!){ (authData, error) in
                 if error == nil {
+                    let ref = Database.database().reference()
+                    ref.child("users").child((authData?.user.uid)!).setValue(["name": self.name.text!, "score": 0])
+                    UserDefaults.standard.set(0, forKey: "UserScore")
                     self.performSegue(withIdentifier: "signupToHome", sender: self)
                 }
                 else{

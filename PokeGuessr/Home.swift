@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class Home : UIViewController {
     
@@ -19,13 +20,16 @@ class Home : UIViewController {
         super.viewDidLoad()
 
         let email = Auth.auth().currentUser!.email
-        userLabel.text = email
-        userLabel.sizeToFit()
         
-        if(UserDefaults.standard.integer(forKey: "UserScore") == nil) {
-            UserDefaults.standard.set(0, forKey: "UserScore")
-        }
-        scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
+        let ref = Database.database().reference()
+        ref.child("users").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            UserDefaults.standard.set(value?["score"], forKey: "UserScore")
+            UserDefaults.standard.set(value?["name"], forKey: "UserName")
+            self.userLabel.text = value?["name"] as! String
+            self.userLabel.sizeToFit()
+            self.scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
+        })
     }
     
     @IBAction func logout(sender: UIButton!) {
