@@ -220,7 +220,7 @@ class GuessView: UIViewController {
     func newPokemon() {
         //starts the timer
         scoreToAdd = 1000
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateScore)), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateScore)), userInfo: nil, repeats: true)
         
         //set button title to Loading while API data loads
         checkButton.setTitle("Loading...", for: .normal)
