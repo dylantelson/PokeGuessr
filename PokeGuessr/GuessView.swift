@@ -155,22 +155,24 @@ class GuessView: UIViewController {
     }
     
     func setupGame() {
+        let yAxisScale = checkButton.frame.origin.y
+        
         scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
         for n in 0 ..< 16 {
             var xToSet = 0
             var yToSet = 0
             if(n == 0) {
                 xToSet = 50
-                yToSet = 700
+                yToSet = Int(yAxisScale-150)
             } else if(n < 8) {
                 xToSet = Int(lettersToClick[n-1].frame.origin.x) + 40
-                yToSet = 700
+                yToSet = Int(yAxisScale-150)
             } else if(n == 8) {
                 xToSet = 50
-                yToSet = 750
+                yToSet = Int(yAxisScale-75)
             } else {
                 xToSet = Int(lettersToClick[n-1].frame.origin.x) + 40
-                yToSet = 750
+                yToSet = Int(yAxisScale-75)
             }
             lettersToClick.append(UIButton(frame: CGRect(x: xToSet, y: yToSet, width: 32, height: 32)))
             lettersToClickFrame.append(UIButton(frame: CGRect(x: xToSet, y: yToSet, width: 32, height: 32)))
