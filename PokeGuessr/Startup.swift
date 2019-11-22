@@ -36,10 +36,22 @@ class Startup: UIViewController {
         self.signUpButton.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
     @IBAction func ButtonClicked(_ sender: UIButton!) {
-        if(sender.tag == 0) {
-            //self.performSegue(withIdentifier: "startToLogin", sender: self)
-        } else {
-            //self.performSegue(withIdentifier: "startToSignup", sender: self)
+        //if button clicked is Anonymous Login
+        if(sender.tag == 2) {
+            Auth.auth().signInAnonymously { (user, error) in
+                if error == nil {
+                    let ref = Database.database().reference()
+                    ref.child("users").child((user?.user.uid)!).setValue(["name": (user?.user.uid)!, "score": 0])
+                    UserDefaults.standard.set(0, forKey: "UserScore")
+                    self.performSegue(withIdentifier: "startupToHome", sender: self)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
     }
 }

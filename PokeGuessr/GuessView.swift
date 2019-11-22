@@ -163,10 +163,10 @@ class GuessView: UIViewController {
             var yToSet = 0
             if(n == 0) {
                 xToSet = 50
-                yToSet = Int(yAxisScale-150)
+                yToSet = Int(yAxisScale-125)
             } else if(n < 8) {
                 xToSet = Int(lettersToClick[n-1].frame.origin.x) + 40
-                yToSet = Int(yAxisScale-150)
+                yToSet = Int(yAxisScale-125)
             } else if(n == 8) {
                 xToSet = 50
                 yToSet = Int(yAxisScale-75)

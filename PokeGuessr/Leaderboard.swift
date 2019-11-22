@@ -43,33 +43,34 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
     var scoresArray = [Scores]()
     
     override func viewDidLoad() {
+        //learned how to use DispatchGroups from https://stackoverflow.com/questions/42484281/waiting-until-the-task-finishes
+        let group = DispatchGroup()
+        group.enter()
+        
         let ref = Database.database().reference()
         let postsRef = ref.child("users")
-        let query = postsRef.queryOrdered(byChild: "score").queryLimited(toLast: 2)
-        query.observeSingleEvent(of: .value, with: { snapshot in
-            for child in snapshot.children {
-                let snap = child as! DataSnapshot
-                let dict = snap.value as! [String: Any]
-                let name = dict["name"] as! String
-                let score = dict["score"] as! Int
-                let aScore = Scores(userName: name, userScore: score)
-                self.scoresArray.insert(aScore, at: 0)
-            }
-
-            for s in self.scoresArray { //print them to console
-                print(s.score, s.name)
-            }
-        })
-        
-        let currUserScore = UserDefaults.standard.integer(forKey: "UserScore")
-        if(currUserScore == nil) {
-            scoresArray.append(Scores(userName: "You", userScore: 0))
-        } else {
-            scoresArray.append(Scores(userName: "You", userScore: currUserScore))
+        //learned how to sort and access data from Firebase database from https://stackoverflow.com/questions/53572518/accessing-the-top-scores-from-a-firebase-database-query-using-swift
+        let query = postsRef.queryOrdered(byChild: "score").queryLimited(toLast: 5)
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
+            query.observeSingleEvent(of: .value, with: { snapshot in
+                for child in snapshot.children {
+                    let snap = child as! DataSnapshot
+                    let dict = snap.value as! [String: Any]
+                    let name = dict["name"] as! String
+                    let score = dict["score"] as! Int
+                    let aScore = Scores(userName: name, userScore: score)
+                    self.scoresArray.insert(aScore, at: 0)
+                }
+                group.leave()
+            })
         }
-        super.viewDidLoad()
-        myTableView.dataSource = self
-        myTableView.delegate = self
+        
+        group.notify(queue: DispatchQueue.main) {
+            super.viewDidLoad()
+            self.myTableView.dataSource = self
+            self.myTableView.delegate = self
+            self.myTableView.reloadData()
+        }
     }
     
     
@@ -89,7 +90,7 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
         cell?.setUpCell()
         cell!.aMap.text = cellName
         cell!.aVal.text = String(cellValue)
-        if(cellName == "You") {
+        if(cellName == UserDefaults.standard.string(forKey: "UserName")) {
             cell!.aMap.textColor = UIColor.blue
             cell!.aVal.textColor = UIColor.blue
         }

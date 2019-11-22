@@ -19,7 +19,8 @@ class Home : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let email = Auth.auth().currentUser!.email
+        //let email = Auth.auth().currentUser!.email
+        let isAnonymous = Auth.auth().currentUser!.isAnonymous
         
         let ref = Database.database().reference()
         ref.child("users").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
