@@ -390,7 +390,7 @@
                                 <rect key="frame" x="137" y="471" width="140" height="52"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="ButtonClicked:" destination="YYT-Cb-qPy" eventType="touchUpInside" id="PNs-5w-tEL"/>
@@ -404,7 +404,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="ButtonClicked:" destination="YYT-Cb-qPy" eventType="touchUpInside" id="fvK-s0-27C"/>
@@ -418,7 +418,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Anonymous Login">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="ButtonClicked:" destination="YYT-Cb-qPy" eventType="touchUpInside" id="1UE-Hz-KLR"/>
@@ -462,21 +462,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRj-6r-9ID">
-                                <rect key="frame" x="166.5" y="619" width="81" height="41"/>
+                                <rect key="frame" x="166.5" y="515" width="81" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="KHS-8u-nVj"/>
                                     <constraint firstAttribute="height" constant="41" id="vxi-eQ-2iu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="loginClickedWith_sender:" destination="Pqk-Xk-g2u" eventType="touchUpInside" id="gK3-P6-DDt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiz-Lg-fpY">
-                                <rect key="frame" x="74" y="513" width="266" height="34"/>
+                                <rect key="frame" x="74" y="409" width="266" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="CRC-Q7-ZX7"/>
                                     <constraint firstAttribute="height" constant="34" id="isU-7x-X7A"/>
@@ -485,16 +485,17 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cte-KC-OTf">
-                                <rect key="frame" x="74" y="433" width="266" height="34"/>
+                                <rect key="frame" x="74" y="329" width="266" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="iLd-WI-BL7"/>
                                     <constraint firstAttribute="width" constant="266" id="zKU-sx-HLs"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PokeGuessr_Title" translatesAutoresizingMaskIntoConstraints="NO" id="8QH-4p-yzw">
-                                <rect key="frame" x="14" y="92" width="385" height="225"/>
+                                <rect key="frame" x="14" y="92" width="385" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="6kV-IH-7sC"/>
                                 </constraints>
@@ -562,16 +563,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-WC-GHN">
-                                <rect key="frame" x="74" y="317" width="266" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Fod-WX-T7M"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="given-name"/>
-                            </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PokeGuessr_Title" translatesAutoresizingMaskIntoConstraints="NO" id="NmP-BJ-Ehf">
-                                <rect key="frame" x="35" y="82" width="346" height="205"/>
+                                <rect key="frame" x="35" y="92" width="346" height="205"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8c-5s-E3J">
                                 <rect key="frame" x="139" y="568" width="136" height="42"/>
@@ -580,12 +573,20 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="SignupClicked:" destination="emd-92-rU2" eventType="touchUpInside" id="P85-hX-Xae"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-WC-GHN">
+                                <rect key="frame" x="74" y="305" width="266" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Fod-WX-T7M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="given-name"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.62181580069999998" blue="0.61338913439999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -599,16 +600,16 @@
                             <constraint firstItem="H5N-ek-EYD" firstAttribute="top" secondItem="ev8-WC-GHN" secondAttribute="bottom" constant="32" id="Plb-p0-qTp"/>
                             <constraint firstItem="4kX-OM-3Bu" firstAttribute="trailing" secondItem="lhj-sk-IGk" secondAttribute="trailing" id="SyP-uf-G4Q"/>
                             <constraint firstItem="O8c-5s-E3J" firstAttribute="top" secondItem="lhj-sk-IGk" secondAttribute="bottom" constant="41" id="T1q-wk-hYN"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="NmP-BJ-Ehf" secondAttribute="bottom" constant="487" id="ZGM-Ca-MjC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="NmP-BJ-Ehf" secondAttribute="bottom" constant="477" id="ZGM-Ca-MjC"/>
                             <constraint firstItem="uCm-0L-KEk" firstAttribute="trailing" secondItem="NmP-BJ-Ehf" secondAttribute="trailing" constant="33" id="Zd9-96-FTO"/>
-                            <constraint firstItem="ev8-WC-GHN" firstAttribute="top" secondItem="NmP-BJ-Ehf" secondAttribute="bottom" constant="30" id="cvt-rN-Z4q"/>
+                            <constraint firstItem="ev8-WC-GHN" firstAttribute="top" secondItem="NmP-BJ-Ehf" secondAttribute="bottom" constant="20" id="cvt-rN-Z4q"/>
                             <constraint firstItem="H5N-ek-EYD" firstAttribute="leading" secondItem="4kX-OM-3Bu" secondAttribute="leading" id="dUL-0h-guq"/>
                             <constraint firstItem="4kX-OM-3Bu" firstAttribute="top" secondItem="H5N-ek-EYD" secondAttribute="bottom" constant="21" id="hoT-Hm-wZu"/>
                             <constraint firstItem="H5N-ek-EYD" firstAttribute="trailing" secondItem="4kX-OM-3Bu" secondAttribute="trailing" id="la7-SD-1cf"/>
                             <constraint firstItem="ev8-WC-GHN" firstAttribute="leading" secondItem="uCm-0L-KEk" secondAttribute="leading" constant="74" id="mfP-kr-Wf6"/>
                             <constraint firstItem="lhj-sk-IGk" firstAttribute="centerX" secondItem="O8c-5s-E3J" secondAttribute="centerX" id="rXv-fl-4W5"/>
                             <constraint firstItem="ev8-WC-GHN" firstAttribute="leading" secondItem="H5N-ek-EYD" secondAttribute="leading" id="xI0-4L-EQR"/>
-                            <constraint firstItem="NmP-BJ-Ehf" firstAttribute="top" secondItem="uCm-0L-KEk" secondAttribute="top" constant="82" id="yfF-lT-5Ds"/>
+                            <constraint firstItem="NmP-BJ-Ehf" firstAttribute="top" secondItem="uCm-0L-KEk" secondAttribute="top" constant="92" id="yfF-lT-5Ds"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uCm-0L-KEk"/>
                     </view>
@@ -633,6 +634,6 @@
         <image name="questionmarkblue" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nSi-AI-OaD"/>
+        <segue reference="9fN-ep-aFT"/>
     </inferredMetricsTieBreakers>
 </document>

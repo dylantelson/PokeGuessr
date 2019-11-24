@@ -21,14 +21,14 @@ class SignUp: UIViewController {
     
     @IBOutlet var signUpButton : UIButton!
     
-    override func viewDidLoad() {
-        self.signUpButton.backgroundColor = UIColor(red: 0.9317, green: 0.9317, blue: 0.9317, alpha: 1)
-        self.signUpButton.layer.cornerRadius = self.signUpButton.frame.height/3
-        self.signUpButton.layer.shadowColor = UIColor.darkGray.cgColor
-        self.signUpButton.layer.shadowRadius = 1
-        self.signUpButton.layer.shadowOpacity = 0.5
-        self.signUpButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-    }
+//    override func viewDidLoad() {
+//        self.signUpButton.backgroundColor = UIColor(red: 0.9317, green: 0.9317, blue: 0.9317, alpha: 1)
+//        self.signUpButton.layer.cornerRadius = self.signUpButton.frame.height/3
+//        self.signUpButton.layer.shadowColor = UIColor.darkGray.cgColor
+//        self.signUpButton.layer.shadowRadius = 1
+//        self.signUpButton.layer.shadowOpacity = 0.5
+//        self.signUpButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+//    }
     
     @IBAction func SignupClicked(_ sender: UIButton!) {
         if(pass.text != confirmpass.text) {

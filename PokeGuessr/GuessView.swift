@@ -111,6 +111,7 @@ class GuessView: UIViewController {
     var name = "name"
     
     @IBAction func BackButtonClicked(_sender: UIButton) {
+        timer.invalidate()
         let userID = Auth.auth().currentUser!.uid
         let ref = Database.database().reference()
         ref.child("users").child(userID).updateChildValues(["score": UserDefaults.standard.integer(forKey: "UserScore")])
@@ -122,6 +123,7 @@ class GuessView: UIViewController {
             if(userInput.joined(separator: "") == currPokemon!.name) {
                 print("Correct!")
                 isChecked = true
+                timer.invalidate()
                 checkButton.setTitle("Next", for: .normal)
                 self.nameLabel.text = self.currPokemon!.name
                 self.nameLabel.text = self.nameLabel.text?.capitalized
