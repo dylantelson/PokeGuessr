@@ -35,6 +35,14 @@ class myCell: UITableViewCell {
         aVal.textAlignment = .right
         self.contentView.addSubview(aVal)
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        for view in subviews {
+            view.removeFromSuperview()
+        }
+    }
 }
 
 class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -50,7 +58,7 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let ref = Database.database().reference()
         let postsRef = ref.child("users")
         //learned how to sort and access data from Firebase database from https://stackoverflow.com/questions/53572518/accessing-the-top-scores-from-a-firebase-database-query-using-swift
-        let query = postsRef.queryOrdered(byChild: "score").queryLimited(toLast: 5)
+        let query = postsRef.queryOrdered(byChild: "score").queryLimited(toLast: 20)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             query.observeSingleEvent(of: .value, with: { snapshot in
                 for child in snapshot.children {
@@ -81,10 +89,9 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:myCell? = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? myCell
         
-        if cell == nil {
-            
+        //if cell == nil {
             cell = myCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
-        }
+        //}
         let cellName = scoresArray[indexPath.row].name
         let cellValue = scoresArray[indexPath.row].score
         cell?.setUpCell()

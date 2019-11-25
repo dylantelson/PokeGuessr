@@ -159,20 +159,28 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PokeGuessr_Title" translatesAutoresizingMaskIntoConstraints="NO" id="df5-3z-013">
                                 <rect key="frame" x="68" y="0.0" width="278" height="205"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard (Top 20)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba9-p0-1tf">
+                                <rect key="frame" x="83" y="150" width="248" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99525195359999996" green="0.62365657090000004" blue="0.61172753570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Lle-Ai-TUF" firstAttribute="bottom" secondItem="df5-3z-013" secondAttribute="bottom" constant="657" id="2pb-ku-aGZ"/>
-                            <constraint firstItem="df5-3z-013" firstAttribute="leading" secondItem="qmg-OD-cPT" secondAttribute="trailing" constant="13" id="81d-ye-zCu"/>
-                            <constraint firstItem="J38-yV-14d" firstAttribute="leading" secondItem="Lle-Ai-TUF" secondAttribute="leading" id="Bjo-di-1T6"/>
                             <constraint firstItem="qmg-OD-cPT" firstAttribute="leading" secondItem="fAB-xG-EVs" secondAttribute="leadingMargin" id="CUC-IQ-jrf"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="J38-yV-14d" secondAttribute="bottom" constant="-34" id="XUk-B6-PCg"/>
-                            <constraint firstItem="J38-yV-14d" firstAttribute="top" secondItem="qmg-OD-cPT" secondAttribute="bottom" constant="86" id="aem-y1-XHK"/>
+                            <constraint firstItem="ba9-p0-1tf" firstAttribute="top" secondItem="Lle-Ai-TUF" secondAttribute="top" constant="106" id="GYB-Su-4Ci"/>
+                            <constraint firstItem="df5-3z-013" firstAttribute="top" secondItem="fAB-xG-EVs" secondAttribute="topMargin" constant="-44" id="GpM-oF-fLj"/>
+                            <constraint firstItem="J38-yV-14d" firstAttribute="leading" secondItem="Lle-Ai-TUF" secondAttribute="leading" id="MA8-yd-S7D"/>
+                            <constraint firstItem="df5-3z-013" firstAttribute="centerX" secondItem="fAB-xG-EVs" secondAttribute="centerX" id="ONu-kj-sIs"/>
+                            <constraint firstItem="ba9-p0-1tf" firstAttribute="centerX" secondItem="J38-yV-14d" secondAttribute="centerX" id="OaB-NX-ckv"/>
+                            <constraint firstItem="Lle-Ai-TUF" firstAttribute="bottom" secondItem="df5-3z-013" secondAttribute="bottom" constant="657" id="SVX-9B-nNp"/>
+                            <constraint firstItem="df5-3z-013" firstAttribute="centerX" secondItem="ba9-p0-1tf" secondAttribute="centerX" id="Ycu-vO-YQ8"/>
                             <constraint firstItem="qmg-OD-cPT" firstAttribute="top" secondItem="Lle-Ai-TUF" secondAttribute="top" constant="38" id="bXs-bS-mh4"/>
-                            <constraint firstItem="df5-3z-013" firstAttribute="centerX" secondItem="fAB-xG-EVs" secondAttribute="centerX" id="fRk-Un-DOS"/>
-                            <constraint firstItem="df5-3z-013" firstAttribute="centerX" secondItem="J38-yV-14d" secondAttribute="centerX" id="hFl-R3-8m9"/>
-                            <constraint firstItem="Lle-Ai-TUF" firstAttribute="trailing" secondItem="df5-3z-013" secondAttribute="trailing" constant="68" id="lXx-xL-OcK"/>
-                            <constraint firstItem="df5-3z-013" firstAttribute="top" secondItem="fAB-xG-EVs" secondAttribute="topMargin" constant="-44" id="oF3-Vn-oQD"/>
+                            <constraint firstItem="J38-yV-14d" firstAttribute="top" secondItem="ba9-p0-1tf" secondAttribute="bottom" constant="23" id="dBi-QB-WPx"/>
+                            <constraint firstItem="df5-3z-013" firstAttribute="leading" secondItem="qmg-OD-cPT" secondAttribute="trailing" constant="13" id="n4o-1L-6eR"/>
+                            <constraint firstItem="Lle-Ai-TUF" firstAttribute="trailing" secondItem="df5-3z-013" secondAttribute="trailing" constant="68" id="tPY-NE-4AW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="J38-yV-14d" secondAttribute="bottom" constant="-34" id="vUe-HP-Yac"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lle-Ai-TUF"/>
                     </view>
