@@ -71,7 +71,7 @@ class GuessView: UIViewController {
     //this struct is just a list of all pokemon names. Honestly it's only in a struct instead of just being a variable because you can collapse anything in {} using CMD+ALT+leftarrow and it's a massive list, so it's neater this way.
     //this list was taken from https://gist.github.com/azai91/31e3b31cbd3992a1cc679017f850a022 then adapted into all lowercase and put into a list of strings format
     struct PokeNames {
-        static var pokeNames = ["bulbasaur","ivysaur","venusaur","charmander","charmeleon","charizard","squirtle","wartortle","blastoise","caterpie","metapod","butterfree","weedle","kakuna","beedrill","pidgey","pidgeotto","pidgeot","rattata","raticate","spearow","fearow","ekans","arbok","pikachu","raichu","sandshrew","sandslash","nidoran♀","nidorina","nidoqueen","nidoran♂","nidorino","nidoking","clefairy","clefable","vulpix","ninetales","jigglypuff","wigglytuff","zubat","golbat","oddish","gloom","vileplume","paras","parasect","venonat","venomoth","diglett","dugtrio","meowth","persian","psyduck","golduck","mankey","primeape","growlithe","arcanine","poliwag","poliwhirl","poliwrath","abra","kadabra","alakazam","machop","machoke","machamp","bellsprout","weepinbell","victreebel","tentacool","tentacruel","geodude","graveler","golem","ponyta","rapidash","slowpoke","slowbro","magnemite","magneton","farfetchd","doduo","dodrio","seel","dewgong","grimer","muk","shellder","cloyster","gastly","haunter","gengar","onix","drowzee","hypno","krabby","kingler","voltorb","electrode","exeggcute","cubone","marowak","hitmonlee","hitmonchan","lickitung","koffing","weezing","rhyhorn","rhydon","chansey","tangela","kangaskhan","horsea","seadra","goldeen","seaking","staryu","starmie","scyther","jynx","electabuzz","magmar","pinsir","tauros","magikarp","gyarados","lapras","ditto","eevee","vaporeon","jolteon","flareon","porygon","omanyte","omastar","kabuto","kabutops","aerodactyl","snorlax","articuno","zapdos","moltres","dratini","dragonair","dragonite","mewtwo","mew","chikorita","bayleef","meganium","cyndaquil","quilava","typhlosion","totodile","croconaw","feraligatr","sentret","furret","hoothoot","noctowl","ledyba","ledian","spinarak","ariados","crobat","chinchou","lanturn","pichu","cleffa","igglybuff","togepi","togetic","natu","xatu","mareep","flaaffy","ampharos","bellossom","marill","azumarill","sudowoodo","politoed","hoppip","skiploom","jumpluff","aipom","sunkern","sunflora","yanma","wooper","quagsire","espeon","umbreon","murkrow","slowking","misdreavus","unown","wobbuffet","girafarig","pineco","forretress","dunsparce","gligar","steelix","snubbull","granbull","qwilfish","scizor","shuckle","heracross","sneasel","teddiursa","ursaring","slugma","magcargo","swinub","piloswine","corsola","remoraid","octillery","delibird","mantine","skarmory","houndour","houndoom","kingdra","phanpy","donphan","porygon2","stantler","smeargle","tyrogue","hitmontop","smoochum","elekid","magby","miltank","blissey","raikou","entei","suicune","larvitar","pupitar","tyranitar","lugia","ho-oh","celebi","treecko","grovyle","sceptile","torchic","combusken","blaziken","mudkip","marshtomp","swampert","poochyena","mightyena","zigzagoon","linoone","wurmple","silcoon","beautifly","cascoon","dustox","lotad","lombre","ludicolo","seedot","nuzleaf","shiftry","taillow","swellow","wingull","pelipper","ralts","kirlia","gardevoir","surskit","masquerain","shroomish","breloom","slakoth","vigoroth","slaking","nincada","ninjask","shedinja","whismur","loudred","exploud","makuhita","hariyama","azurill","nosepass","skitty","delcatty","sableye","mawile","aron","lairon","aggron","meditite","medicham","electrike","manectric","plusle","minun","volbeat","illumise","roselia","gulpin","swalot","carvanha","sharpedo","wailmer","wailord","numel","camerupt","torkoal","spoink","grumpig","spinda","trapinch","vibrava","flygon","cacnea","cacturne","swablu","altaria","zangoose","seviper","lunatone","solrock","barboach","whiscash","corphish","crawdaunt","baltoy","claydol","lileep","cradily","anorith","armaldo","feebas","milotic","castform","kecleon","shuppet","banette","duskull","dusclops","tropius","chimecho","absol","wynaut","snorunt","glalie","spheal","sealeo","walrein","clamperl","huntail","gorebyss","relicanth","luvdisc","bagon","shelgon","salamence","beldum","metang","metagross","regirock","regice","registeel","latias","latios","kyogre","groudon","rayquaza","jirachi","deoxys","turtwig","grotle","torterra","chimchar","monferno","infernape","piplup","prinplup","empoleon","starly","staravia","staraptor","bidoof","bibarel","kricketot","kricketune","shinx","luxio","luxray","budew","roserade","cranidos","rampardos","shieldon","bastiodon","burmy","mothim","combee","vespiquen","pachirisu","buizel","floatzel","cherubi","cherrim","shellos","gastrodon","ambipom","drifloon","drifblim","buneary","lopunny","mismagius","honchkrow","glameow","purugly","chingling","stunky","skuntank","bronzor","bronzong","bonsly","happiny","chatot","spiritomb","gible","gabite","garchomp","munchlax","riolu","lucario","hippopotas","hippowdon","skorupi","drapion","croagunk","toxicroak","carnivine","finneon","lumineon","mantyke","snover","abomasnow","weavile","magnezone","lickilicky","rhyperior","tangrowth","electivire","magmortar","togekiss","yanmega","leafeon","glaceon","gliscor","mamoswine","porygon-z","gallade","probopass","dusknoir","froslass","rotom","uxie","mesprit","azelf","dialga","palkia","heatran","regigigas","giratina","cresselia","phione","manaphy","darkrai","shaymin","arceus","victini","snivy","servine","serperior","tepig","pignite","emboar","oshawott","dewott","samurott","patrat","watchog","lillipup","herdier","stoutland","purrloin","liepard","pansage","simisage","pansear","simisear","panpour","simipour","munna","musharna","pidove","tranquill","unfezant","blitzle","zebstrika","roggenrola","boldore","gigalith","woobat","swoobat","drilbur","excadrill","audino","timburr","gurdurr","conkeldurr","tympole","palpitoad","seismitoad","throh","sawk","sewaddle","swadloon","leavanny","venipede","whirlipede","scolipede","cottonee","whimsicott","petilil","lilligant","sandile","krokorok","krookodile","darumaka","darmanitan","maractus","dwebble","crustle","scraggy","scrafty","sigilyph","yamask","cofagrigus","tirtouga","carracosta","archen","archeops","trubbish","garbodor","zorua","zoroark","minccino","cinccino","gothita","gothorita","gothitelle","solosis","duosion","reuniclus","ducklett","swanna","vanillite","vanillish","vanilluxe","deerling","sawsbuck","emolga","karrablast","escavalier","foongus","amoonguss","frillish","jellicent","alomomola","joltik","galvantula","ferroseed","ferrothorn","klink","klang","klinklang","tynamo","eelektrik","eelektross","elgyem","beheeyem","litwick","lampent","chandelure","axew","fraxure","haxorus","cubchoo","beartic","cryogonal","shelmet","accelgor","stunfisk","mienfoo","mienshao","druddigon","golett","golurk","pawniard","bisharp","bouffalant","rufflet","braviary","vullaby","mandibuzz","heatmor","durant","deino","zweilous","hydreigon","larvesta","volcarona","cobalion","terrakion","virizion","reshiram","zekrom","landorus","kyurem","meloetta","genesect","chespin","quilladin","chesnaught","fennekin","braixen","delphox","froakie","frogadier","greninja","bunnelby","diggersby","fletchling","fletchinder","talonflame","scatterbug","spewpa","vivillon","litleo","pyroar","flabébé","floette","florges","skiddo","gogoat","pancham","pangoro","furfrou","espurr","meowstic","honedge","doublade","aegislash","spritzee","aromatisse","swirlix","slurpuff","inkay","malamar","binacle","barbaracle","skrelp","dragalge","clauncher","clawitzer","helioptile","heliolisk","tyrunt","tyrantrum","amaura","aurorus","sylveon","hawlucha","dedenne","carbink","goomy","sliggoo","goodra","klefki","phantump","trevenant","bergmite","avalugg","noibat","noivern","xerneas","yveltal","zygarde","diancie","hoopa","volcanion","rowlet","dartrix","decidueye","litten","torracat","incineroar","popplio","brionne","primarina","pikipek","trumbeak","toucannon","yungoos","gumshoos","grubbin","charjabug","vikavolt","crabrawler","crabominable","oricorio","cutiefly","ribombee","rockruff","lycanroc","wishiwashi","mareanie","toxapex","mudbray","mudsdale","dewpider","araquanid","fomantis","lurantis","morelull","shiinotic","salandit","salazzle","stufful","bewear","bounsweet","steenee","tsareena","comfey","oranguru","passimian","wimpod","golisopod","sandygast","palossand","pyukumuku","silvally","komala","turtonator","togedemaru","mimikyu","bruxish","drampa","dhelmise","jangmo-o","hakamo-o","kommo-o","cosmog","cosmoem","solgaleo","lunala","nihilego","buzzwole","pheromosa","xurkitree","celesteela","kartana","guzzlord","necrozma","magearna","marshadow"]
+        static var pokeNames = ["bulbasaur","ivysaur","venusaur","charmander","charmeleon","charizard","squirtle","wartortle","blastoise","caterpie","metapod","butterfree","weedle","kakuna","beedrill","pidgey","pidgeotto","pidgeot","rattata","raticate","spearow","fearow","ekans","arbok","pikachu","raichu","sandshrew","sandslash","nidoran♀","nidorina","nidoqueen","nidoran♂","nidorino","nidoking","clefairy","clefable","vulpix","ninetales","jigglypuff","wigglytuff","zubat","golbat","oddish","gloom","vileplume","paras","parasect","venonat","venomoth","diglett","dugtrio","meowth","persian","psyduck","golduck","mankey","primeape","growlithe","arcanine","poliwag","poliwhirl","poliwrath","abra","kadabra","alakazam","machop","machoke","machamp","bellsprout","weepinbell","victreebel","tentacool","tentacruel","geodude","graveler","golem","ponyta","rapidash","slowpoke","slowbro","magnemite","magneton","farfetchd","doduo","dodrio","seel","dewgong","grimer","muk","shellder","cloyster","gastly","haunter","gengar","onix","drowzee","hypno","krabby","kingler","voltorb","electrode","exeggcute","cubone","marowak","hitmonlee","hitmonchan","lickitung","koffing","weezing","rhyhorn","rhydon","chansey","tangela","kangaskhan","horsea","seadra","goldeen","seaking","staryu","starmie","scyther","jynx","electabuzz","magmar","pinsir","tauros","magikarp","gyarados","lapras","ditto","eevee","vaporeon","jolteon","flareon","porygon","omanyte","omastar","kabuto","kabutops","aerodactyl","snorlax","articuno","zapdos","moltres","dratini","dragonair","dragonite","mewtwo","mew","chikorita","bayleef","meganium","cyndaquil","quilava","typhlosion","totodile","croconaw","feraligatr","sentret","furret","hoothoot","noctowl","ledyba","ledian","spinarak","ariados","crobat","chinchou","lanturn","pichu","cleffa","igglybuff","togepi","togetic","natu","xatu","mareep","flaaffy","ampharos","bellossom","marill","azumarill","sudowoodo","politoed","hoppip","skiploom","jumpluff","aipom","sunkern","sunflora","yanma","wooper","quagsire","espeon","umbreon","murkrow","slowking","misdreavus","unown","wobbuffet","girafarig","pineco","forretress","dunsparce","gligar","steelix","snubbull","granbull","qwilfish","scizor","shuckle","heracross","sneasel","teddiursa","ursaring","slugma","magcargo","swinub","piloswine","corsola","remoraid","octillery","delibird","mantine","skarmory","houndour","houndoom","kingdra","phanpy","donphan","porygon2","stantler","smeargle","tyrogue","hitmontop","smoochum","elekid","magby","miltank","blissey","raikou","entei","suicune","larvitar","pupitar","tyranitar","lugia","ho-oh","celebi","treecko","grovyle","sceptile","torchic","combusken","blaziken","mudkip","marshtomp","swampert","poochyena","mightyena","zigzagoon","linoone","wurmple","silcoon","beautifly","cascoon","dustox","lotad","lombre","ludicolo","seedot","nuzleaf","shiftry","taillow","swellow","wingull","pelipper","ralts","kirlia","gardevoir","surskit","masquerain","shroomish","breloom","slakoth","vigoroth","slaking","nincada","ninjask","shedinja","whismur","loudred","exploud","makuhita","hariyama","azurill","nosepass","skitty","delcatty","sableye","mawile","aron","lairon","aggron","meditite","medicham","electrike","manectric","plusle","minun","volbeat","illumise","roselia","gulpin","swalot","carvanha","sharpedo","wailmer","wailord","numel","camerupt","torkoal","spoink","grumpig","spinda","trapinch","vibrava","flygon","cacnea","cacturne","swablu","altaria","zangoose","seviper","lunatone","solrock","barboach","whiscash","corphish","crawdaunt","baltoy","claydol","lileep","cradily","anorith","armaldo","feebas","milotic","castform","kecleon","shuppet","banette","duskull","dusclops","tropius","chimecho","absol","wynaut","snorunt","glalie","spheal","sealeo","walrein","clamperl","huntail","gorebyss","relicanth","luvdisc","bagon","shelgon","salamence","beldum","metang","metagross","regirock","regice","registeel","latias","latios","kyogre","groudon","rayquaza","jirachi","deoxys","turtwig","grotle","torterra","chimchar","monferno","infernape","piplup","prinplup","empoleon","starly","staravia","staraptor","bidoof","bibarel","kricketot","kricketune","shinx","luxio","luxray","budew","roserade","cranidos","rampardos","shieldon","bastiodon","burmy","mothim","combee","vespiquen","pachirisu","buizel","floatzel","cherubi","cherrim","shellos","gastrodon","ambipom","drifloon","drifblim","buneary","lopunny","mismagius","honchkrow","glameow","purugly","chingling","stunky","skuntank","bronzor","bronzong","bonsly","happiny","chatot","spiritomb","gible","gabite","garchomp","munchlax","riolu","lucario","hippopotas","hippowdon","skorupi","drapion","croagunk","toxicroak","carnivine","finneon","lumineon","mantyke","snover","abomasnow","weavile","magnezone","lickilicky","rhyperior","tangrowth","electivire","magmortar","togekiss","yanmega","leafeon","glaceon","gliscor","mamoswine","porygon-z","gallade","probopass","dusknoir","froslass","rotom","uxie","mesprit","azelf","dialga","palkia","heatran","regigigas","giratina","cresselia","phione","manaphy","darkrai","shaymin","arceus","victini","snivy","servine","serperior","tepig","pignite","emboar","oshawott","dewott","samurott","patrat","watchog","lillipup","herdier","stoutland","purrloin","liepard","pansage","simisage","pansear","simisear","panpour","simipour","munna","musharna","pidove","tranquill","unfezant","blitzle","zebstrika","roggenrola","boldore","gigalith","woobat","swoobat","drilbur","excadrill","audino","timburr","gurdurr","conkeldurr","tympole","palpitoad","seismitoad","throh","sawk","sewaddle","swadloon","leavanny","venipede","whirlipede","scolipede","cottonee","whimsicott","petilil","lilligant","sandile","krokorok","krookodile","darumaka","darmanitan","maractus","dwebble","crustle","scraggy","scrafty","sigilyph","yamask","cofagrigus","tirtouga","carracosta","archen","archeops","trubbish","garbodor","zorua","zoroark","minccino","cinccino","gothita","gothorita","gothitelle","solosis","duosion","reuniclus","ducklett","swanna","vanillite","vanillish","vanilluxe","deerling","sawsbuck","emolga","karrablast","escavalier","foongus","amoonguss","frillish","jellicent","alomomola","joltik","galvantula","ferroseed","ferrothorn","klink","klang","klinklang","tynamo","eelektrik","eelektross","elgyem","beheeyem","litwick","lampent","chandelure","axew","fraxure","haxorus","cubchoo","beartic","cryogonal","shelmet","accelgor","stunfisk","mienfoo","mienshao","druddigon","golett","golurk","pawniard","bisharp","bouffalant","rufflet","braviary","vullaby","mandibuzz","heatmor","durant","deino","zweilous","hydreigon","larvesta","volcarona","cobalion","terrakion","virizion","reshiram","zekrom","landorus","kyurem","meloetta","genesect","chespin","quilladin","chesnaught","fennekin","braixen","delphox","froakie","frogadier","greninja","bunnelby","diggersby","fletchling","talonflame","scatterbug","spewpa","vivillon","litleo","pyroar","flabébé","floette","florges","skiddo","gogoat","pancham","pangoro","furfrou","espurr","meowstic","honedge","doublade","aegislash","spritzee","aromatisse","swirlix","slurpuff","inkay","malamar","binacle","barbaracle","skrelp","dragalge","clauncher","clawitzer","helioptile","heliolisk","tyrunt","tyrantrum","amaura","aurorus","sylveon","hawlucha","dedenne","carbink","goomy","sliggoo","goodra","klefki","phantump","trevenant","bergmite","avalugg","noibat","noivern","xerneas","yveltal","zygarde","diancie","hoopa","volcanion","rowlet","dartrix","decidueye","litten","torracat","incineroar","popplio","brionne","primarina","pikipek","trumbeak","toucannon","yungoos","gumshoos","grubbin","charjabug","vikavolt","crabrawler","crabominable","oricorio","cutiefly","ribombee","rockruff","lycanroc","wishiwashi","mareanie","toxapex","mudbray","mudsdale","dewpider","araquanid","fomantis","lurantis","morelull","shiinotic","salandit","salazzle","stufful","bewear","bounsweet","steenee","tsareena","comfey","oranguru","passimian","wimpod","golisopod","sandygast","palossand","pyukumuku","silvally","komala","turtonator","togedemaru","mimikyu","bruxish","drampa","dhelmise","jangmo-o","hakamo-o","kommo-o","cosmog","cosmoem","solgaleo","lunala","nihilego","buzzwole","pheromosa","xurkitree","celesteela","kartana","guzzlord","necrozma","magearna","marshadow"]
     
     }
     
@@ -88,6 +88,9 @@ class GuessView: UIViewController {
     var currPokemon : Pokemon?
     var currGen = 0
     
+    //Size multiplier to change the scale depending on phone type
+    var sizeMultiplier = 1.0
+    var buttonSizeMultiplier = 1.0
     //Score to add to the user's total score, per Pokemon, that will be decremented over time
     var scoreToAdd = 1000
     var timer = Timer()
@@ -99,7 +102,15 @@ class GuessView: UIViewController {
     @IBOutlet var heightLabel : UILabel!
     @IBOutlet var nameLabel : UILabel!
     @IBOutlet var PokeImage: UIImageView!
+    @IBOutlet var line: UIView!
     
+    
+    @IBOutlet weak var typeHolderLabel: UILabel!
+    @IBOutlet weak var genHolderLabel: UILabel!
+    @IBOutlet weak var abilityHolderLabel: UILabel!
+    @IBOutlet weak var heightHolderLabel: UILabel!
+    
+    @IBOutlet var PokeGuessrLabel: UIImageView!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var checkButton : UIButton!
     
@@ -119,6 +130,7 @@ class GuessView: UIViewController {
     
     //Whenever the bottom button is pressed, this function is run. Sender is the button clicked.
     @IBAction func ButtonClicked(_ sender: UIButton) {
+        print("checky2:", checkButton.frame.origin.y)
         if(!isChecked) {
             if(userInput.joined(separator: "") == currPokemon!.name) {
                 print("Correct!")
@@ -127,7 +139,7 @@ class GuessView: UIViewController {
                 checkButton.setTitle("Next", for: .normal)
                 self.nameLabel.text = self.currPokemon!.name
                 self.nameLabel.text = self.nameLabel.text?.capitalized
-                self.nameLabel.sizeToFit()
+                //self.nameLabel.sizeToFit()
                 self.nameLabel.center.x = self.view.center.x
                 self.PokeImage.image = imageToShow
                 
@@ -156,28 +168,72 @@ class GuessView: UIViewController {
         }
     }
     
+    func setupScreen() {
+        let objectsToResize : [UIView] = [self.PokeImage, self.backButton, self.PokeGuessrLabel]
+        let labelsToResize : [UILabel] = [self.scoreLabel, self.typeLabel, self.moveLabel, self.abilityLabel, self.heightLabel, self.nameLabel, self.abilityHolderLabel, self.heightHolderLabel, self.typeHolderLabel, self.genHolderLabel]
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 1136:
+                self.sizeMultiplier = 0.5
+                self.buttonSizeMultiplier = 0.7
+            case 1334:
+                self.sizeMultiplier = 0.6
+                self.buttonSizeMultiplier = 0.85
+            case 1792:
+                self.sizeMultiplier = 0.7
+                self.buttonSizeMultiplier = 0.9
+            case 1920, 2208:
+                self.sizeMultiplier = 0.8
+                self.buttonSizeMultiplier = 0.95
+            case 2436:
+                self.sizeMultiplier = 1
+                self.buttonSizeMultiplier = 1
+            case 2688:
+                self.sizeMultiplier = 1
+                self.buttonSizeMultiplier = 1
+            default:
+                self.sizeMultiplier = 1
+                self.buttonSizeMultiplier = 1
+            }
+        }
+        for object in objectsToResize {
+            object.frame.size.height = object.frame.size.height * CGFloat(sizeMultiplier)
+            object.bounds.size.width = object.frame.size.width * CGFloat(sizeMultiplier)
+            object.frame.origin.y *= CGFloat(sizeMultiplier)
+        }
+        for label in labelsToResize {
+            //label.font = label.font.withSize(ceil(label.font.pointSize * CGFloat(sizeMultiplier)))
+            //label.font = label.font.withSize(19)
+            label.frame.size.height = label.frame.size.height * CGFloat(sizeMultiplier)
+            label.adjustsFontSizeToFitWidth = true
+            
+            label.frame.origin.y *= CGFloat(self.sizeMultiplier)
+        }
+    }
+    
     func setupGame() {
+        setupScreen()
         let yAxisScale = checkButton.frame.origin.y
-        
+        print("checky:", yAxisScale)
         scoreLabel.text = "Score: " + String(UserDefaults.standard.integer(forKey: "UserScore"))
         for n in 0 ..< 16 {
             var xToSet = 0
             var yToSet = 0
             if(n == 0) {
                 xToSet = 50
-                yToSet = Int(yAxisScale-125)
+                yToSet = Int(yAxisScale-95)
             } else if(n < 8) {
                 xToSet = Int(lettersToClick[n-1].frame.origin.x) + 40
-                yToSet = Int(yAxisScale-125)
+                yToSet = Int(yAxisScale-95)
             } else if(n == 8) {
                 xToSet = 50
-                yToSet = Int(yAxisScale-75)
+                yToSet = Int(yAxisScale-45)
             } else {
                 xToSet = Int(lettersToClick[n-1].frame.origin.x) + 40
-                yToSet = Int(yAxisScale-75)
+                yToSet = Int(yAxisScale-45)
             }
-            lettersToClick.append(UIButton(frame: CGRect(x: xToSet, y: yToSet, width: 32, height: 32)))
-            lettersToClickFrame.append(UIButton(frame: CGRect(x: xToSet, y: yToSet, width: 32, height: 32)))
+            lettersToClick.append(UIButton(frame: CGRect(x: xToSet, y: yToSet, width: Int(round(32 * self.buttonSizeMultiplier)), height: Int(round(32 * self.buttonSizeMultiplier)))))
+            lettersToClickFrame.append(UIButton(frame: CGRect(x: xToSet, y: yToSet, width: Int(round(32 * self.buttonSizeMultiplier)), height: Int(round(32 * self.buttonSizeMultiplier)))))
             //lettersToClick.last!.frame = CGRect(x: lettersToClick.last!.frame.origin.x, y: lettersToClick.last!.frame.origin.y, width: lettersToClick.last!.titleLabel!.intrinsicContentSize.width + 16, height: lettersToClick.last!.titleLabel!.intrinsicContentSize.height + 8)
             //            wordsToClick.last!.backgroundColor = UIColor(red: 1, green: 0.478, blue: 0.478, alpha: 1)
             lettersToClick.last!.backgroundColor = UIColor.white
@@ -208,6 +264,10 @@ class GuessView: UIViewController {
             self.view.addSubview(lettersToClick.last!)
             self.view.addSubview(lettersToClickFrame.last!)
             view.sendSubviewToBack(lettersToClickFrame.last!)
+            line.frame.origin.y = lettersToClickFrame.first!.frame.origin.y - 40
+            let screenWidth = UIScreen.main.bounds.width
+            line.frame.origin.x = screenWidth * 0.05
+            line.bounds.size.width = screenWidth * 0.9
         }
         newPokemon()
     }
@@ -236,7 +296,7 @@ class GuessView: UIViewController {
                 self.checkButton.setTitle("Check", for: .normal)
                 //move all buttons that are at the top from the previous userInput back to their original positions at the bottom
                 for n in self.lettersToClick {
-                    if(n.frame.origin.y < 650) {
+                    if(n.frame.origin.y < self.checkButton.frame.origin.y - 100) {
                         let dest = CGPoint(x: self.lettersToClickFrame[n.tag].frame.origin.x, y: self.lettersToClickFrame[n.tag].frame.origin.y)
                         UIView.animate(withDuration: 0.2, animations: {
                             n.frame = CGRect(x: dest.x, y: dest.y, width: n.frame.size.width, height: n.frame.size.height)
@@ -299,9 +359,9 @@ class GuessView: UIViewController {
                 //create the userInputButtonFrames, meaning the frames at the top where the buttons go after the user clicks on them
                 for n in 0 ..< self.currPokemon!.name.count {
                     if(n == 0) {
-                        self.userInputButtonFrames.append(UIButton(frame: CGRect(x: Int(self.view.center.x) - self.currPokemon!.name.count * 20, y: 642, width: 32, height: 32)))
+                        self.userInputButtonFrames.append(UIButton(frame: CGRect(x: Int(self.view.center.x) - self.currPokemon!.name.count * Int(round(20 * self.buttonSizeMultiplier)), y: 642, width: Int(round(32 * self.buttonSizeMultiplier)), height: Int(round(32 * self.buttonSizeMultiplier)))))
                     } else {
-                        self.userInputButtonFrames.append(UIButton(frame: CGRect(x: self.userInputButtonFrames[n-1].frame.origin.x + 40, y: 642, width: 32, height: 32)))
+                        self.userInputButtonFrames.append(UIButton(frame: CGRect(x: self.userInputButtonFrames[n-1].frame.origin.x + CGFloat(40 * self.buttonSizeMultiplier), y: self.line.frame.origin.y - 50, width: CGFloat(round(32 * self.buttonSizeMultiplier)), height: CGFloat(round(32 * self.buttonSizeMultiplier)))))
                     }
                     self.userInputButtonFrames.last!.isEnabled = false
                     self.userInputButtonFrames.last!.backgroundColor = UIColor(red: 0.9317, green: 0.9317, blue: 0.9317, alpha: 1)
@@ -319,13 +379,14 @@ class GuessView: UIViewController {
                     self.view.addSubview(self.userInputButtonFrames.last!)
                     self.view.sendSubviewToBack(self.userInputButtonFrames.last!)
                 }
+                self.userInputButtonFrames[0].frame.origin.y = self.line.frame.origin.y - 50
             }
         }
     }
     
     @objc func letterButtonClicked(sender: UIButton!) {
         //if button is at the bottom, meaning not in user input
-        if(sender.frame.origin.y >= 650) {
+        if(sender.frame.origin.y >= checkButton.frame.origin.y - 100) {
             //if input is full, meaning there are no "/"s in userInput, return
             if(!userInput.contains("/")) {
                 return
@@ -334,7 +395,7 @@ class GuessView: UIViewController {
             //find first open spot (first index of "/") and both move to it and add the letter to userInput
             let leftMostOpenSpot = userInput.firstIndex(of: "/")
             UIView.animate(withDuration: 0.2, animations: {
-                sender.frame = CGRect(x: self.userInputButtonFrames[leftMostOpenSpot!].frame.origin.x, y: self.userInputButtonFrames[leftMostOpenSpot!].frame.origin.y, width: 32, height: 32)
+                sender.frame = CGRect(x: self.userInputButtonFrames[leftMostOpenSpot!].frame.origin.x, y: self.userInputButtonFrames[leftMostOpenSpot!].frame.origin.y, width: self.userInputButtonFrames[leftMostOpenSpot!].bounds.size.width, height: self.userInputButtonFrames[leftMostOpenSpot!].bounds.size.height)
             })
             userInput[leftMostOpenSpot!] = sender.titleLabel!.text!
             //if button is at top, meaning already in user input
@@ -361,7 +422,9 @@ class GuessView: UIViewController {
     //when GuessView loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupGame()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.setupGame()
+        }
     }
     
     //function to convert the parameter height from the decimeters given by the API and return it as a string of feet and inches (8 -> 3'4'').
@@ -402,13 +465,13 @@ class GuessView: UIViewController {
                     self.currGen = 1
                 } else if(randomNum < 249) {
                     self.currGen = 2
-                } else if(randomNum < 384) {
+                } else if(randomNum < 383) {
                     self.currGen = 3
                 } else if(randomNum < 489) {
                     self.currGen = 4
                 } else if(randomNum < 641) {
                     self.currGen = 5
-                } else if(randomNum < 711) {
+                } else if(randomNum < 710) {
                     self.currGen = 6
                 } else {
                     self.currGen = 7
