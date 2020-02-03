@@ -15,12 +15,32 @@ class Home : UIViewController {
     
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var leaderboardButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var PokeGuessrLabel: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bounds = UIScreen.main.bounds
+        logoutButton.frame.origin.y = bounds.height - 90
+        leaderboardButton.frame.origin.y = logoutButton.frame.origin.y - 175
+        leaderboardButton.frame.origin.y = leaderboardButton.frame.origin.y - 50
+        logoutButton.center.x = self.view.center.x
+        leaderboardButton.center.x = self.view.center.x
+        startButton.frame.origin.y = leaderboardButton.frame.origin.y - 90
+        startButton.center.x = self.view.center.x
+        
+        scoreLabel.center.x = self.view.center.x
+        scoreLabel.frame.origin.y = leaderboardButton.frame.origin.y + 80
+        
+        PokeGuessrLabel.center.x = self.view.center.x
+        //PokeGuessrLabel.frame.origin.y = startButton.frame.origin.y - 156
+        PokeGuessrLabel.frame.origin.y = 142
+        //userLabel.frame.origin.x = bounds.width - 120
 
         //let email = Auth.auth().currentUser!.email
-        let isAnonymous = Auth.auth().currentUser!.isAnonymous
+        //let isAnonymous = Auth.auth().currentUser!.isAnonymous
         
         let ref = Database.database().reference()
         ref.child("users").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in

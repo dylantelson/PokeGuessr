@@ -27,7 +27,7 @@ class myCell: UITableViewCell {
     
     // Setup your objects
     func setUpCell() {
-        aMap = UILabel(frame: CGRect(x: 20, y: 0, width: 200, height: 50))
+        aMap = UILabel(frame: CGRect(x: 10, y: 0, width: 200, height: 50))
         aMap.textAlignment = .left
         self.contentView.addSubview(aMap)
         
@@ -65,13 +65,15 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let query = postsRef.queryOrdered(byChild: "score").queryLimited(toLast: 20)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             query.observeSingleEvent(of: .value, with: { snapshot in
+                var i = 20
                 for child in snapshot.children {
                     let snap = child as! DataSnapshot
                     let dict = snap.value as! [String: Any]
                     let name = dict["name"] as! String
                     let score = dict["score"] as! Int
-                    let aScore = Scores(userName: name, userScore: score)
+                    let aScore = Scores(userName: String(i) + ") " + name, userScore: score)
                     self.scoresArray.insert(aScore, at: 0)
+                    i-=1
                 }
                 group.leave()
             })
@@ -80,7 +82,9 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
         group.notify(queue: DispatchQueue.main) {
             super.viewDidLoad()
             self.PokeGuessrImage.frame.origin.y = 40
+            self.PokeGuessrImage.center.x = self.view.center.x
             self.LeaderboardText.frame.origin.y = self.PokeGuessrImage.frame.origin.y + 65
+            self.LeaderboardText.center.x = self.view.center.x
             self.myTableView.dataSource = self
             self.myTableView.delegate = self
             self.myTableView.reloadData()
@@ -104,7 +108,7 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
         cell?.setUpCell()
         cell!.aMap.text = cellName
         cell!.aVal.text = String(cellValue)
-        if(cellName == UserDefaults.standard.string(forKey: "UserName")) {
+        if(cellName.components(separatedBy: ") ")[1] == UserDefaults.standard.string(forKey: "UserName")) {
             cell!.aMap.textColor = UIColor.blue
             cell!.aVal.textColor = UIColor.blue
         }

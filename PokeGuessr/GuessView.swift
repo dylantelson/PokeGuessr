@@ -217,6 +217,7 @@ class GuessView: UIViewController {
             
             label.frame.origin.y *= CGFloat(self.sizeMultiplier)
         }
+        self.PokeImage.image = nil
         let leftMargin = screenWidth * 0.1
         let rightMargin = screenWidth * 0.75
         typeHolderLabel.frame.origin.x = leftMargin
@@ -306,8 +307,8 @@ class GuessView: UIViewController {
         scoreToAdd = 1000
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateScore)), userInfo: nil, repeats: true)
         
-        //set button title to Loading while API data loads
-        checkButton.setTitle("Loading...", for: .normal)
+        //set button title to null while API data loads
+        checkButton.setTitle("", for: .normal)
         //what's in the brackets is done after the API data is loaded
         getPokemon {
             //in main.async because changing UILabel text must be done on main thread, not background

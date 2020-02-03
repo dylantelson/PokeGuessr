@@ -15,8 +15,21 @@ class Login: UIViewController {
     @IBOutlet var email : UITextField!
     @IBOutlet var pass : UITextField!
     
+    @IBOutlet weak var PokeGuessrImage: UIImageView!
     @IBOutlet var loginButton : UIButton!
     //Learned how to use Firebase from the following article: https://medium.com/@ashikabala01/how-to-build-login-and-sign-up-functionality-for-your-ios-app-using-firebase-within-15-mins-df4731faf2f7
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PokeGuessrImage.frame.origin.y = 142
+        PokeGuessrImage.center.x = self.view.center.x
+        loginButton.frame.origin.y = UIScreen.main.bounds.height - 250
+        loginButton.center.x = self.view.center.x
+        pass.frame.origin.y = loginButton.frame.origin.y - 106
+        pass.center.x = self.view.center.x
+        email.frame.origin.y = pass.frame.origin.y - 80
+        email.center.x = self.view.center.x
+    }
     
 //    override func viewDidLoad() {
 //        self.loginButton.backgroundColor = UIColor(red: 0.9317, green: 0.9317, blue: 0.9317, alpha: 1)

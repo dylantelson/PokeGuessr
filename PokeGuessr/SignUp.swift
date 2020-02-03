@@ -18,9 +18,25 @@ class SignUp: UIViewController {
     @IBOutlet var confirmpass : UITextField!
     
     @IBOutlet var name : UITextField!
+    @IBOutlet weak var PokeGuessrImage: UIImageView!
     
     @IBOutlet var signUpButton : UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PokeGuessrImage.frame.origin.y = 142
+        PokeGuessrImage.center.x = self.view.center.x
+        signUpButton.frame.origin.y = UIScreen.main.bounds.height - 170
+        signUpButton.center.x = self.view.center.x
+        confirmpass.frame.origin.y = signUpButton.frame.origin.y - 75
+        confirmpass.center.x = self.view.center.x
+        pass.frame.origin.y = confirmpass.frame.origin.y - 55
+        pass.center.x = self.view.center.x
+        name.frame.origin.y = pass.frame.origin.y - 55
+        name.center.x = self.view.center.x
+        email.frame.origin.y = name.frame.origin.y - 55
+        email.center.x = self.view.center.x
+    }
 //    override func viewDidLoad() {
 //        self.signUpButton.backgroundColor = UIColor(red: 0.9317, green: 0.9317, blue: 0.9317, alpha: 1)
 //        self.signUpButton.layer.cornerRadius = self.signUpButton.frame.height/3
