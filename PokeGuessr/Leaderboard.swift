@@ -31,7 +31,7 @@ class myCell: UITableViewCell {
         aMap.textAlignment = .left
         self.contentView.addSubview(aMap)
         
-        aVal = UILabel(frame: CGRect(x: self.frame.width - 125, y: 0, width: 200, height: 50))
+        aVal = UILabel(frame: CGRect(x: UIScreen.main.bounds.width - 208, y: 0, width: 200, height: 50))
         aVal.textAlignment = .right
         self.contentView.addSubview(aVal)
     }
@@ -46,6 +46,10 @@ class myCell: UITableViewCell {
 }
 
 class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    @IBOutlet weak var PokeGuessrImage: UIImageView!
+    @IBOutlet weak var LeaderboardText: UILabel!
     
     @IBOutlet var myTableView : UITableView!
     var scoresArray = [Scores]()
@@ -75,9 +79,12 @@ class Leaderboard: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         group.notify(queue: DispatchQueue.main) {
             super.viewDidLoad()
+            self.PokeGuessrImage.frame.origin.y = 40
+            self.LeaderboardText.frame.origin.y = self.PokeGuessrImage.frame.origin.y + 65
             self.myTableView.dataSource = self
             self.myTableView.delegate = self
             self.myTableView.reloadData()
+            self.myTableView.frame.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - self.myTableView.frame.origin.y)
         }
     }
     
