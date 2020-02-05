@@ -15,6 +15,7 @@
 		648BB8C2237289FD001C5DA8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BB8C1237289FD001C5DA8 /* Login.swift */; };
 		648BB8C423728A13001C5DA8 /* Startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BB8C323728A13001C5DA8 /* Startup.swift */; };
 		648BB8C62372926E001C5DA8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BB8C52372926E001C5DA8 /* Home.swift */; };
+		649D646123EB5DA8007E21E8 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 649D646023EB5DA8007E21E8 /* AppIcon.appiconset */; };
 		64A691A9236BDBEC000002D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A691A8236BDBEC000002D5 /* AppDelegate.swift */; };
 		64A691AE236BDBEC000002D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A691AC236BDBEC000002D5 /* Main.storyboard */; };
 		64A691B0236BDBEE000002D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A691AF236BDBEE000002D5 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		648BB8C1237289FD001C5DA8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		648BB8C323728A13001C5DA8 /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
 		648BB8C52372926E001C5DA8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		649D646023EB5DA8007E21E8 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		649FD6BC2378D7A1006D19B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64A691A5236BDBEC000002D5 /* PokeGuessr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeGuessr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A691A8236BDBEC000002D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				64A691B4236BDBEE000002D5 /* Info.plist */,
 				643E1AAD2373297F008195D3 /* GoogleService-Info.plist */,
 				649FD6BC2378D7A1006D19B9 /* README.md */,
+				649D646023EB5DA8007E21E8 /* AppIcon.appiconset */,
 			);
 			path = PokeGuessr;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				64A691B3236BDBEE000002D5 /* LaunchScreen.storyboard in Resources */,
 				643E1AAE2373297F008195D3 /* GoogleService-Info.plist in Resources */,
 				64A691B0236BDBEE000002D5 /* Assets.xcassets in Resources */,
+				649D646123EB5DA8007E21E8 /* AppIcon.appiconset in Resources */,
 				64A691AE236BDBEC000002D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

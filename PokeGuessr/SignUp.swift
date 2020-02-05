@@ -24,17 +24,43 @@ class SignUp: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        email.layer.cornerRadius = 5
+        name.layer.cornerRadius = 5
+        pass.layer.cornerRadius = 5
+        confirmpass.layer.cornerRadius = 5
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: self.email.frame.height))
+        let paddingView2 = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: self.name.frame.height))
+        let paddingView3 = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: self.pass.frame.height))
+        let paddingView4 = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: self.confirmpass.frame.height))
+
+
+        email.leftView = paddingView
+        email.leftViewMode = UITextField.ViewMode.always
+        name.leftView = paddingView2
+        name.leftViewMode = UITextField.ViewMode.always
+        pass.leftView = paddingView3
+        pass.leftViewMode = UITextField.ViewMode.always
+        confirmpass.leftView = paddingView4
+        confirmpass.leftViewMode = UITextField.ViewMode.always
+        
         PokeGuessrImage.frame.origin.y = 142
         PokeGuessrImage.center.x = self.view.center.x
         signUpButton.frame.origin.y = UIScreen.main.bounds.height - 170
+        
+        email.frame.origin.y = self.view.center.y - 75
+        name.frame.origin.y = email.frame.origin.y + 55
+        pass.frame.origin.y = name.frame.origin.y + 55
+        confirmpass.frame.origin.y = pass.frame.origin.y + 55
         signUpButton.center.x = self.view.center.x
-        confirmpass.frame.origin.y = signUpButton.frame.origin.y - 75
+        //confirmpass.frame.origin.y = signUpButton.frame.origin.y - 75
         confirmpass.center.x = self.view.center.x
-        pass.frame.origin.y = confirmpass.frame.origin.y - 55
+        //pass.frame.origin.y = confirmpass.frame.origin.y - 55
         pass.center.x = self.view.center.x
-        name.frame.origin.y = pass.frame.origin.y - 55
+        //name.frame.origin.y = pass.frame.origin.y - 55
         name.center.x = self.view.center.x
-        email.frame.origin.y = name.frame.origin.y - 55
+        //email.frame.origin.y = name.frame.origin.y - 55
         email.center.x = self.view.center.x
     }
 //    override func viewDidLoad() {

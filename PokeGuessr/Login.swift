@@ -21,13 +21,28 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        email.layer.cornerRadius = 5
+        pass.layer.cornerRadius = 5
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: self.email.frame.height))
+        let paddingView2 = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: self.pass.frame.height))
+
+
+        email.leftView = paddingView
+        email.leftViewMode = UITextField.ViewMode.always
+        pass.leftView = paddingView2
+        pass.leftViewMode = UITextField.ViewMode.always
+        
         PokeGuessrImage.frame.origin.y = 142
         PokeGuessrImage.center.x = self.view.center.x
         loginButton.frame.origin.y = UIScreen.main.bounds.height - 250
         loginButton.center.x = self.view.center.x
-        pass.frame.origin.y = loginButton.frame.origin.y - 106
+        email.frame.origin.y = self.view.center.y - 75
+        pass.frame.origin.y = email.frame.origin.y + 75
+        //pass.frame.origin.y = loginButton.frame.origin.y - 106
         pass.center.x = self.view.center.x
-        email.frame.origin.y = pass.frame.origin.y - 80
+        //email.frame.origin.y = pass.frame.origin.y - 80
         email.center.x = self.view.center.x
     }
     

@@ -15,16 +15,19 @@ class Startup: UIViewController {
     
     @IBOutlet var loginButton : UIButton!
     @IBOutlet var signUpButton : UIButton!
+    @IBOutlet weak var anonLoginButton: UIButton!
     @IBOutlet weak var PokeGuessrImage: UIImageView!
     
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
         PokeGuessrImage.frame.origin.y = 142
         PokeGuessrImage.center.x = self.view.center.x
-        signUpButton.frame.origin.y = UIScreen.main.bounds.height - 240
-        signUpButton.center.x = self.view.center.x
-        loginButton.frame.origin.y = signUpButton.frame.origin.y - 98
+        loginButton.frame.origin.y = self.view.center.y - 100
         loginButton.center.x = self.view.center.x
+        signUpButton.frame.origin.y = loginButton.frame.origin.y + 98
+        signUpButton.center.x = self.view.center.x
+        anonLoginButton.frame.origin.y = signUpButton.frame.origin.y + 98
+        anonLoginButton.center.x = self.view.center.x
         if Auth.auth().currentUser != nil {
             self.performSegue(withIdentifier: "startupToHome", sender: self)
         }
